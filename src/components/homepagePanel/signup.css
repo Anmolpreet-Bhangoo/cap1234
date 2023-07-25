@@ -1,0 +1,348 @@
+.wholeHomePage{
+  background-image: linear-gradient(to bottom, rgb(146, 209, 109), rgb(25, 154, 13));
+  position:fixed;
+  background-position:cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.logoSignUpPage{
+  margin-left: 437px;
+  margin-top: 20px;
+  margin-right: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.div-signup{
+    padding:4%;
+    padding-bottom: 8%;
+    margin: auto;
+    border-radius: 26px;
+    height: 400px;
+    width: 500px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: whitesmoke;
+    color:black;
+    border-width: thin;
+    font-weight: bold;
+  }
+  
+  .titleSignUp{
+     text-align: center;
+     font-family: 'Source Sans Pro', sans-serif;
+     color:#2D8D34;
+     
+     padding: 1%;
+     font-weight: bold;
+     padding-top: 2%;
+    }
+    
+  .titleSign{
+      margin-top:-10%;
+  }
+  .inside{
+      font-weight: normal;
+  }
+  
+  .submitbox{
+      
+          padding:4%;
+          padding-bottom: 8%;
+          padding-top: 3%;
+          
+          margin-left: 30%;
+          border-radius: 26px;
+          height: 40px;
+          width: 100px;
+          font-family: 'Source Sans Pro', sans-serif;
+          background-color: #2D8D34;
+          color:white;
+          border-width: thin;
+          font-weight: bold;
+          margin-bottom: 5%;
+        
+  }
+  .SignUpForm{
+      margin-left:2%;
+  }
+  .makeCenter{
+      margin-left: 5%;
+  }
+  .alertMessage {
+    background-color: #4caf50; /* Green background color */
+    color: white; /* White text color */
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 5px;
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #2D8D34; 
+      border-radius: 5px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(77, 154, 73); 
+    }
+
+.showhide{
+  background-image: url("./photo/eye_resized.png");
+  background-color: transparent;
+  border-width: 0px;
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position:relative;
+  padding-bottom: 2%;
+  bottom:30%;
+  right:37%;
+}
+   
+    /* hidden by default */
+
+#showButton2 {
+
+  display: none;
+
+}
+
+.inputSignUpPage[type=text],[type=email],[type=password] {
+  width: 340px;
+  padding-left:4%;
+  height: 40px;
+  margin: 9px 0; 
+  border-radius: 26px;
+  background-color: whitesmoke;
+  border-color: grey;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-width: thin;
+  } 
+  
+  .eyeIconI{
+    margin-left: -120%;
+  }
+  @media screen and (max-width: 1274px) {
+  
+    .eyeIconI{
+      margin-left: -40%;
+    } 
+}
+  @media screen and (max-width: 1190px) {
+    .logoSignUpPage{
+      margin-left: 390px;
+     
+    }
+    .eyeIconI{
+      margin-left: -330%;
+    }
+    #passwordLoginSignup{
+      width: 340px;
+    }
+ 
+      
+    }
+
+    @media screen and (max-width: 1116px) {
+      .logoSignUpPage{
+      margin-left: 350px; 
+      }
+      .eyeIconI{
+       margin-left: -220%;
+      }
+     
+  }
+  @media screen and (max-width: 1105.33px) {
+    .logoSignUpPage{
+    margin-left: 350px; 
+    }
+    .eyeIconI{
+     margin-left: -230%;
+    }
+   
+}
+
+@media screen and (max-width: 1111.33px) {
+  .logoSignUpPage{
+  margin-left: 350px; 
+  }
+  .eyeIconI{
+   margin-left: -230%;
+  }
+ 
+}
+@media screen and (max-width: 1020px) {
+  .logoSignUpPage{
+    margin-left: 310px;
+   
+  }
+  .eyeIconI{
+    margin-left: -210%;
+  }
+  #passwordLoginSignup{
+    width: 340px;
+  }
+
+}
+
+@media screen and (max-width: 938px) {
+  .logoSignUpPage{
+    margin-left: 270px;
+   
+  }
+  .eyeIconI{
+    margin-left: -210%;
+  }
+  #passwordLoginSignup{
+    width: 340px;
+  }
+  .titleSignUp{
+    
+    padding-top: 5%;
+      } 
+  }
+
+  @media screen and (max-width: 915.33px) {
+    .logoSignUpPage{
+      margin-left: 270px;
+     
+    }
+    .eyeIconI{
+      margin-left: -150%;
+    }
+    #passwordLoginSignup{
+      width: 340px;
+    }
+    .titleSignUp{
+      
+      padding-top: 5%;
+     
+        }
+
+      .div-signup{
+      padding:4%;
+      height: 380px;
+      width: 490px;
+
+        }
+      
+    }
+
+    @media screen and (max-width: 844px) {
+      .logoSignUpPage{
+        margin-left: 220px;
+       
+      }
+      .div-signup{
+        padding:4%;
+        height: 360px;
+        width: 490px;
+  
+          }
+      
+  }
+  
+  @media screen and (max-width: 778px) {
+    .logoSignUpPage{
+      margin-left: 180px; 
+    }
+    .div-signup{
+      padding:4%;
+      height: 380px;
+      width: 490px;
+    }
+    .titleSignUp{
+    padding-top: 8%;  
+    }
+    
+    
+}
+
+  @media screen and (max-width: 753.33px) {
+    .logoSignUpPage{
+      margin-left: 180px; 
+    }
+    .div-signup{
+      padding:4%;
+      height: 340px;
+      width: 490px;
+    }
+    .titleSignUp{
+    padding-top: 8%;  
+    }
+  
+}
+
+@media screen and (max-width: 752px) {
+  .logoSignUpPage{
+    margin-left: 170px; 
+  }
+  .div-signup{
+    padding:4%;
+    height: 380px;
+    width: 490px;
+  }
+
+}
+
+@media screen and (max-width: 659.33px) {
+  .logoSignUpPage{
+    margin-left: 120px; 
+  }
+  .div-signup{
+    padding:4%;
+    height: 370px;
+    width: 480px;
+  }
+
+}
+
+@media screen and (max-width: 608px) {
+  .logoSignUpPage{
+    margin-left: 110px; 
+  }
+  .div-signup{
+    padding:4%;
+    height: 360px;
+    width: 475px;
+  }
+  .eyeIconI{
+    margin-left: -60%;
+   }
+  
+}
+
+@media screen and (max-width: 526px) {
+  .logoSignUpPage{
+    margin-left: 60px; 
+  }
+  .div-signup{
+    padding:4%;
+    height: 360px;
+    width: 475px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .logoSignUpPage{
+    margin-left: 40px; 
+  }
+  .div-signup{
+    padding:5%;
+    height: 350px;
+  }
+
+}

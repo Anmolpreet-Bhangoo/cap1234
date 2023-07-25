@@ -1,0 +1,752 @@
+.wholeHomePage{
+    background-image: linear-gradient(to bottom, rgb(146, 209, 109), rgb(25, 154, 13));
+    position:fixed;
+    background-position:cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+.wholeHomePage {
+    height: 100%;
+  }
+  
+.logo-Login{
+  margin-left: 437px;
+  margin-top: 20px;
+  margin-right: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  }
+
+.div-login{
+  background-color: whitesmoke ;
+  background-position: center;
+  margin-left: 31%;
+  margin-right: 31%;
+  padding: 5%;  
+  padding-top: 1%;
+  border-radius: 25px;
+  height: 420px;
+  font-family: 'Source Sans Pro', sans-serif;
+  }
+
+.inputHomepage[type=text],[type=email]{
+  width: 340px;
+  padding-left:4%;
+  height: 40px;
+  margin: 9px 0; 
+  border-radius: 26px;
+  background-color: whitesmoke;
+  border-color: grey;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-width: thin;
+  } 
+  
+  .h1-LoginTitle{
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  color:#2D8D34;
+  text-shadow: black 1px 0 70px;
+  padding: 1%;
+  font-weight: bold;
+  padding-top: 2%;
+  
+  }
+  
+.boxes{
+  padding:4%;
+  padding-bottom: 10%;
+  margin-left: 12%;
+  margin-right: 10%;
+  border-radius: 26px;
+  height: 40px;
+  width: 100px;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #2D8D34;
+  color:white;
+  border-width: thin;
+  margin-top: 2%;
+  font-weight:bold;
+  
+}
+.inputHomepage, #emailLogin, #passwordLogin{
+
+  width: 340px;
+  padding-left:4%;
+  height: 40px;
+  margin: 9px 0;
+  border-radius: 26px;
+  background-color: whitesmoke;
+  border-color: grey;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-width: thin;
+
+  }
+  .bi-eye{
+    margin-left: 90%;
+  }
+
+  .bi-eye-slash{
+    margin-left: 90%;
+  }
+
+   
+@media screen and (max-width: 1273px) {
+    .logo-Login{
+    margin-left: 309px;
+    margin-top: 20px;
+     }
+    .div-login{
+    margin-left: 27%;
+    margin-right: 27%;
+    height: 400px;
+    font-size: 18px; 
+    }
+    .inputHomepage[type=text],[type=password],[type=email]{
+    font-size: small;
+    } 
+   .boxes{
+    padding:2%;
+    margin-left: 12%;
+    margin-right: 10%;
+    height: 40px;
+    width: 100px;
+    }
+    .bi-eye{
+    margin-left: 90%;
+    }
+   
+     .bi-eye-slash{
+       margin-left: 90%;
+   
+     }
+  }
+  @media screen and (min-width: 1600px) {
+    .logo-Login{
+      margin-left: 309px;
+      margin-top: 20px;
+    
+     }
+     .div-login{
+       margin-left: 27%;
+       margin-right: 27%;
+       height: 400px;
+       font-size: 18px;
+      
+     }
+   
+     .inputHomepage[type=text],[type=password],[type=email]{
+     font-size: small;
+     } 
+     
+   .boxes{
+     padding:2%;
+     margin-left: 12%;
+     margin-right: 10%;
+     height: 40px;
+     width: 100px;
+   }
+  
+     .bi-eye{
+       
+       margin-left: 90%;
+       
+       
+     }
+   
+     .bi-eye-slash{
+       margin-left: 90%;
+   
+     }
+  }
+  
+  
+  @media screen and (max-width: 1274px) {
+    .logo-Login{
+      margin-left: 440px;
+      margin-top: 20px;
+    
+     }
+     .div-login{
+       margin-left: 30%;
+       margin-right: 30%;
+       font-size: 17px;
+      
+     }
+  
+     .bi-eye{
+       
+       margin-left: 83%;
+       
+     }
+   
+     .bi-eye-slash{
+       margin-left: 83%;
+   
+     }
+  }
+
+  @media screen and (max-width: 1244px) {
+    .logo-Login{
+      margin-left: 410px;
+    
+     }
+    }
+  
+    @media screen and (max-width: 1190px) {
+      .logo-Login{
+        margin-left: 395px;
+      
+       }
+       .div-login{
+         margin-left: 29%;
+         margin-right: 29%;
+         font-size: 16px;
+        
+       }
+
+        
+    
+       .bi-eye{
+         
+         margin-left: 95%;
+         
+       }
+     
+       .bi-eye-slash{
+         margin-left: 95%;
+     
+       }
+       .inputHomepage, #emailLogin, #passwordLogin{
+
+        width: 380px;
+      
+        }
+    }
+  
+    
+    @media screen and (max-width: 1116px) {
+      .logo-Login{
+        margin-left: 355px;
+      
+       }
+       .div-login{
+         margin-left: 28%;
+         margin-right: 28%;
+         font-size: 16px;
+        
+       }
+       .bi-eye{
+         
+         margin-left: 93%;
+         
+       }
+     
+       .bi-eye-slash{
+         margin-left: 93%;
+     
+       }
+       .inputHomepage, #emailLogin, #passwordLogin{
+
+        width: 370px;
+      
+        }
+    }
+  
+
+    
+    @media screen and (max-width: 1050px) {
+      .logo-Login{
+        margin-left: 320px;
+      
+       }
+       .div-login{
+         margin-left: 27%;
+         margin-right: 27%;
+         font-size: 16px;
+        
+      
+        }
+    }
+  
+    @media screen and (max-width: 991.33px) {
+      .logo-Login{
+        margin-left: 295px;
+      
+       }
+       .div-login{
+         margin-left: 26%;
+         margin-right: 26%;
+         font-size: 16px;
+        
+       
+        }
+    }
+
+        
+    @media screen and (max-width: 1116px) {
+      .logo-Login{
+        margin-left: 355px;
+      
+       }
+       .div-login{
+         margin-left: 28%;
+         margin-right: 28%;
+         font-size: 16px;
+        
+       }
+       .bi-eye{
+         
+         margin-left: 93%;
+         
+       }
+     
+       .bi-eye-slash{
+         margin-left: 93%;
+     
+       }
+       .inputHomepage, #emailLogin, #passwordLogin{
+
+        width: 370px;
+      
+        }
+    }
+  
+
+    
+    @media screen and (max-width: 1050px) {
+      .logo-Login{
+        margin-left: 270px;
+      
+       }
+       .div-login{
+         margin-left: 25.5%;
+         margin-right: 25.5%;
+         font-size: 15px;
+       }
+        .bi-eye{
+         
+          margin-left: 93%;
+          
+        }
+      
+        .bi-eye-slash{
+          margin-left: 93%;
+      
+        }
+        .inputHomepage, #emailLogin, #passwordLogin{
+ 
+         width: 360px;
+        } 
+        }
+    
+          
+    @media screen and (max-width: 915.33px) {
+      .logo-Login{
+        margin-left: 260px;
+      
+       }
+       .div-login{
+         margin-left: 24.9%;
+         margin-right: 24.9%;
+         font-size: 15px;
+         padding-left: 6%;
+       }
+        .bi-eye{
+         
+          margin-left: 90%;
+          
+        }
+      
+        .bi-eye-slash{
+          margin-left: 90%;
+      
+        }
+        .inputHomepage, #emailLogin, #passwordLogin{
+ 
+         width: 340px;
+        } 
+        }
+        @media screen and (max-width: 910px) {
+          .logo-Login{
+            margin-left: 260px;
+          
+           }
+           .div-login{
+             margin-left: 24%;
+             margin-right: 24%;
+             font-size: 15px;
+             padding-left: 6%;
+           }
+            .bi-eye{
+             
+              margin-left: 90%;
+              
+            }
+          
+            .bi-eye-slash{
+              margin-left: 90%;
+          
+            }
+            .inputHomepage, #emailLogin, #passwordLogin{
+     
+             width: 340px;
+            } 
+            }
+
+           
+    @media screen and (max-width: 908px) {
+      .logo-Login{
+        margin-left: 260px;
+      
+       }
+       .div-login{
+         margin-left: 24%;
+         margin-right: 24%;
+         font-size: 15px;
+         padding-left: 6%;
+       }
+        .bi-eye{
+         
+          margin-left: 90%;
+          
+        }
+      
+        .bi-eye-slash{
+          margin-left: 90%;
+      
+        }
+        .inputHomepage, #emailLogin, #passwordLogin{
+ 
+         width: 360px;
+        } 
+        }
+    
+        
+           
+    @media screen and (max-width: 870px) {
+      .logo-Login{
+        margin-left: 230px;
+      
+       }
+       .div-login{
+         margin-left: 23.9%;
+         margin-right: 23.9%;
+         font-size: 15px;
+         padding-left: 6%;
+       }
+        .bi-eye{
+         
+          margin-left: 90%;
+          
+        }
+      
+        .bi-eye-slash{
+          margin-left: 90%;
+      
+        }
+        .inputHomepage, #emailLogin, #passwordLogin{
+ 
+         width: 350px;
+        } 
+        }
+    
+           
+        @media screen and (max-width: 870px) {
+          .logo-Login{
+            margin-left: 230px;
+          
+           }
+           .div-login{
+             margin-left: 23.9%;
+             margin-right: 23.9%;
+             font-size: 15px;
+             padding-left: 6%;
+           }
+            .bi-eye{
+             
+              margin-left: 90%;
+              
+            }
+          
+            .bi-eye-slash{
+              margin-left: 90%;
+          
+            }
+            .inputHomepage, #emailLogin, #passwordLogin{
+     
+             width: 350px;
+            } 
+            }
+        
+
+             
+    @media screen and (max-width: 870px) {
+      .logo-Login{
+        margin-left: 230px;
+      
+       }
+       .div-login{
+         margin-left: 23.9%;
+         margin-right: 23.9%;
+         font-size: 15px;
+         padding-left: 6%;
+       }
+        .bi-eye{
+         
+          margin-left: 90%;
+          
+        }
+      
+        .bi-eye-slash{
+          margin-left: 90%;
+      
+        }
+        .inputHomepage, #emailLogin, #passwordLogin{
+ 
+         width: 350px;
+        } 
+        }
+    
+           
+
+              
+    @media screen and (max-width: 866px) {
+      .logo-Login{
+        margin-left: 230px;
+      
+       }
+       .div-login{
+         margin-left: 23.9%;
+         margin-right: 23.9%;
+         font-size: 15px;
+         padding-left: 6%;
+         height: 380px;
+       }
+ 
+        .boxes{
+          
+          padding-bottom: 8%;
+          margin-left: 10%;
+        }
+        }
+
+                
+    @media screen and (max-width: 866px) {
+      .logo-Login{
+        margin-left: 200px;
+      
+       }
+       .div-login{
+         margin-left: 23.9%;
+         margin-right: 23.9%;
+         font-size: 15px;
+         padding-left: 6%;
+         height: 380px;
+       }
+ 
+        .boxes{
+          
+          padding-bottom: 8%;
+          margin-left: 7%;
+        }
+        .inputHomepage, #emailLogin, #passwordLogin{
+ 
+          width: 326px;
+         } 
+        
+        }
+    
+           
+    
+           
+
+        @media screen and (max-width: 866px) {
+          .logo-Login{
+            margin-left: 180px;
+          
+           }
+           .div-login{
+             margin-left: 23.9%;
+             margin-right: 23.9%;
+             font-size: 15px;
+             padding-left: 6%;
+             height: 380px;
+           }
+     
+            .boxes{
+              
+              padding-bottom: 8%;
+              margin-left: 7%;
+            }
+            .inputHomepage, #emailLogin, #passwordLogin{
+     
+              width: 306px;
+             } 
+            
+            }
+        
+            @media screen and (max-width: 735.33px) {
+              .logo-Login{
+                margin-left: 150px;
+              
+               }
+  
+         
+                .boxes{
+                  
+                  padding-bottom: 8%;
+                  margin-left: 5%;
+                }
+                .inputHomepage, #emailLogin, #passwordLogin{
+         
+                  width: 290px;
+                 } 
+                
+                }              
+        
+
+            @media screen and (max-width: 734px) {
+              .logo-Login{
+                margin-left: 160px;
+              
+               }
+               .div-login{
+                 margin-left: 23.9%;
+                 margin-right: 23.9%;
+                 font-size: 15px;
+                 padding-left: 6%;
+                 height: 380px;
+               }
+         
+                .boxes{
+                  
+                  padding-bottom: 8%;
+                  margin-left: 5%;
+                }
+                .inputHomepage, #emailLogin, #passwordLogin{
+         
+                  width: 290px;
+                 } 
+                
+                }
+            
+  
+                @media screen and (max-width: 692px) {
+                  .logo-Login{
+                    margin-left: 120px;
+                  
+                   }
+                   .div-login{
+                     margin-left: 18%;
+                     margin-right: 18%;
+                     font-size: 15px;
+                     padding-left: 6%;
+                     height: 380px;
+                   }
+             
+                    .boxes{
+                      
+                      padding-bottom: 8%;
+                      margin-left: 9%;
+                    }
+                    .inputHomepage, #emailLogin, #passwordLogin{
+             
+                      width: 330px;
+                     } 
+                    
+                    }
+                
+   
+  
+                    @media screen and (max-width: 608px) {
+                      .logo-Login{
+                        margin-left: 120px;
+                      
+                       }
+                       .div-login{
+                         margin-left: 17%;
+                         margin-right: 17%;
+                         font-size: 15px;
+                         padding-left: 6%;
+                         height: 380px;
+                       }
+                 
+                        .boxes{
+                          
+                          padding-bottom: 8%;
+                          margin-left: 8%;
+                        }
+                        .inputHomepage, #emailLogin, #passwordLogin{
+                 
+                          width: 310px;
+                         } 
+                         .bi-eye{
+         
+                          margin-left: 85%;
+                          
+                        }
+                      
+                        .bi-eye-slash{
+                          margin-left: 85%;
+                      
+                        }
+                        
+                        }
+                    
+                        @media screen and (max-width: 568px) {
+                          .logo-Login{
+                            margin-left: 90px;
+                          
+                           }
+                           .div-login{
+                             margin-left: 15%;
+                             margin-right: 15%;
+                             font-size: 15px;
+                             padding-left: 6%;
+                             height: 380px;
+                           }
+                     
+                            .boxes{
+                              
+                              padding-bottom: 8%;
+                              margin-left: 7%;
+                            }
+                            .inputHomepage, #emailLogin, #passwordLogin{
+                     
+                              width: 310px;
+                             } 
+                 
+                            
+                            }
+
+                            @media screen and (max-width: 513.33px) {
+                              .logo-Login{
+                                margin-left: 60px;
+                              
+                               }
+                               .div-login{
+                                 margin-left: 13%;
+                                 margin-right: 13%;
+                                 font-size: 15px;
+                                 padding-left: 6%;
+                                 height: 380px;
+                               }
+                         
+                                .boxes{
+                                  
+padding-bottom: 8%;
+ margin-left: 7%;
+}
+   .inputHomepage, #emailLogin, #passwordLogin{                   
+  width: 310px;
+  } 
+  }
+                           
+                    
+                                                           
+                
+                                                          
+                
+                                                       
+            
+                                  
