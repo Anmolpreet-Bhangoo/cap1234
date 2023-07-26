@@ -44,7 +44,7 @@ export default function CreateBooking() {
       title: 'Booking Created Successfully'
     })
     if (state) {
-      Axios.put(`http://localhost:3001/booking/${id}`, {
+      Axios.put(`https://back1234.onrender.com/booking/${id}`, {
         roomID,
         name,
         noOfGuest,

@@ -5,7 +5,7 @@ const TicketSubmitted = () => {
   const navigate = useNavigate();
 
   function issueTicket() {
-    navigate("/");
+    navigate("/createTicket");
   }
   function logOut() {
     navigate("/");

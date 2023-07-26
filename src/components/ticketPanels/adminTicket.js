@@ -37,7 +37,7 @@ const AdminTicket = () => {
 
 
   useEffect(() => {
-    axios.get('http://localhost:3001/adminTickets')
+    axios.get('https://back1234.onrender.com/adminTickets')
       .then(res => setTicket(res.data))
       .catch(err => console.log(err));
   })
@@ -86,7 +86,7 @@ const AdminTicket = () => {
                 <td>{data.TICKET_SUBJECT}</td>
                 <td>{data.TICKET_PRIORITY}</td>
                 <td>{data.TICKET_STATUS}</td>
-                <td><img className="adminTicketPic" src={`http://localhost:3001/uploads/`+ data.TICKET_PIC} alt="Ticket Issued"></img></td>
+                <td><img className="adminTicketPic" src={`https://back1234.onrender.com/uploads/`+ data.TICKET_PIC} alt="Ticket Issued"></img></td>
               </tr>
             ))}
           </table>

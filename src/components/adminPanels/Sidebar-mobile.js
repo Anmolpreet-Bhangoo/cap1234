@@ -70,7 +70,7 @@ function Sidebar() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/admin/data/123456');
+        const response = await axios.get('https://back1234.onrender.com/admin/data/123456');
         setData(response.data);
       } catch (error) {
         console.error(error);

@@ -42,7 +42,7 @@ const CreateTicket = () => {
     formData.append('subject', subject);
     formData.append('description', description);
     
-    axios.post("http://localhost:3001/createTicket", formData,{
+    axios.post("https://back1234.onrender.com/createTicket", formData,{
       headers: {
         'Content-Type': 'multipart/form-data',
       },

@@ -246,7 +246,7 @@ function Contents() {
   let dateToday = day[current.getDay()] + " " + month[current.getMonth()] + " " + current.getDate() + ", " + current.getFullYear();
 
   // server host
-  const host = "http://localhost:3001/";
+  const host = "https://back1234.onrender.com/";
 
   // form
   const [formData, setFormData] = useState({
@@ -270,7 +270,7 @@ function Contents() {
   useEffect(() => {
     const fetchDataAdmin = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/admin/data/123456');
+        const response = await axios.get('https://back1234.onrender.com/admin/data/123456');
         setDataAdmin(response.data);
       } catch (error) {
         console.error(error);
@@ -282,9 +282,9 @@ function Contents() {
       try {
         let response;
         if(typeOfData === "user") {
-          response = await axios.get('http://localhost:3001/'+typeOfData+'/');
+          response = await axios.get('https://back1234.onrender.com/'+typeOfData+'/');
         } else{
-          response = await axios.get('http://localhost:3001/user/'+typeOfData+'/');
+          response = await axios.get('https://back1234.onrender.com/'+typeOfData+'/');
         }
         
         setDataUsers(response.data);

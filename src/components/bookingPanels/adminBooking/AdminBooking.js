@@ -77,7 +77,7 @@ const AdminBooking = () => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if(result.isConfirmed) {
-        Axios.delete(`http://localhost:3001/delete/${id}` )
+        Axios.delete(`https://back1234.onrender.com/delete/${id}` )
         .then(() => {
           getRequestList();
           Swal.fire({
@@ -99,7 +99,7 @@ const AdminBooking = () => {
 
 
   const getRequestList = () => {
-    Axios.get("http://localhost:3001/requests").then((response) => {
+    Axios.get("https://back1234.onrender.com/requests").then((response) => {
       const formattedData = response.data.map((item) => {
         const formattedDate = new Date(item.bookingDate).toISOString().split('T')[0];
         return {
