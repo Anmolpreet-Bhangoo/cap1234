@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Sidebar.css';
 
+import { useNavigate } from "react-router-dom";
+
+
 const showSettings = () => {
   document.getElementById('settings').style.display = "block";
   document.getElementById('viewUsers').style.display = "none";
@@ -75,6 +78,17 @@ const signOutUser = () => {
 
 function Sidebar() {
 
+  
+const navigate = useNavigate();
+
+function taketoBooking(){
+  navigate("/viewBookings");
+}
+
+function taketoTicket(){
+  navigate("/viewTickets");
+}
+
 
   function signOut(){
 
@@ -135,11 +149,11 @@ function Sidebar() {
               </li>
 
               <li>
-                <a href="/viewTickets"><i class="bi bi-ticket-perforated"></i> View Tickets</a>
+                <a onClick={taketoTicket}><i class="bi bi-ticket-perforated"></i> View Tickets</a>
               </li>
 
               <li>
-                <a href="/viewBookings"><i class="bi bi-journal-bookmark"></i> View Bookings</a>
+                <a onClick={taketoBooking}><i class="bi bi-journal-bookmark"></i> View Bookings</a>
               </li>
 
               <li>
