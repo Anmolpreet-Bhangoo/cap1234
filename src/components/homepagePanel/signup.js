@@ -19,7 +19,7 @@ export default function SignUp() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    axios.post('http://localhost:3001/signup', {
+    axios.post('https://back1234.onrender.com/signup', {
       firstName,
       lastName,
       email,

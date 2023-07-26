@@ -42,7 +42,7 @@ export default function Home() {
     const email = document.getElementById("emailLogin").value;
     const password = document.getElementById("passwordLogin").value;
 
-    fetch("http://localhost:3001/login", {
+    fetch("https://back1234.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
