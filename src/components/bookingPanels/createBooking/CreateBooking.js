@@ -65,7 +65,7 @@ export default function CreateBooking() {
         })
         .catch((err) => console.log(err));
     } else {
-      Axios.post("http://localhost:3001/booking", {
+      Axios.post("https://back1234.onrender.com/booking", {
         roomID,
         name,
         noOfGuest,
@@ -87,7 +87,7 @@ export default function CreateBooking() {
   }
 
   const update = () => {
-    Axios.put("http://localhost:3001/update", {
+    Axios.put("https://back1234.onrender.com/update", {
       id: id,
       roomID: roomID,
       name: name,
