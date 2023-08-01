@@ -149,11 +149,11 @@ function taketoTicket(){
               </li>
 
               <li>
-                <a onClick={taketoTicket}><i class="bi bi-ticket-perforated"></i> View Tickets</a>
+                <a href='#' onClick={taketoTicket}><i class="bi bi-ticket-perforated"></i> View Tickets</a>
               </li>
 
               <li>
-                <a onClick={taketoBooking}><i class="bi bi-journal-bookmark"></i> View Bookings</a>
+                <a href='#' onClick={taketoBooking}><i class="bi bi-journal-bookmark"></i> View Bookings</a>
               </li>
 
               <li>
