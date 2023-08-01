@@ -5,6 +5,217 @@ import { useNavigate } from 'react-router-dom';
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap" rel="stylesheet">
 </link>
 
+
+let response = null;
+let i;
+
+// Method for creating modal trigger
+function createTrigger() {
+
+  if(document.getElementById('trigger') == null) {
+
+    let btn = document.createElement("button");
+
+    btn.id = "trigger";
+    btn.type = "button";
+    btn.setAttribute("data-bs-toggle", "modal");
+    btn.setAttribute("data-bs-target", "#modalDisplay");
+    btn.hidden = true;
+
+    // Create Element
+    document.body.appendChild(btn);
+
+  } else {
+    console.log("Can't Create modal trigger, Element exist!");
+  }
+
+}
+
+// method for creating modal
+function createModal(response) {
+
+  // Modal Parent
+  const modalDisplay = document.createElement("div");
+  modalDisplay.id = "modalDisplay";
+  modalDisplay.setAttribute("class", "modal fade");
+
+  // Modal Outer Child 0
+  const modalChild0 = document.createElement("div");
+  modalChild0.id = "modalChild0";
+  modalChild0.setAttribute("class", "modal-dialog modal-dialog-centered modal-dark");
+
+  // Modal Inner Child 1
+  const modalChild1 = document.createElement("div");
+  modalChild1.id = "modalChild1";
+  modalChild1.setAttribute("class", "modal-content");
+
+    // Modal Child 1 of Inner Child 1
+    const modalChild1of1 = document.createElement("div");
+    modalChild1of1.id = "modalChild1of1";
+    modalChild1of1.setAttribute("class", "modal-header");
+
+      // h5 of Modal Child 1 of Inner Child 1
+      const modalChild1of1H5 = document.createElement("h5");
+      modalChild1of1H5.setAttribute("class", "modal-title");
+      modalChild1of1H5.innerText = "Prospect Now - Admin Panel";
+
+      // Button of Modal Child 1 of Inner Child 1
+      const modalChild1of1Btn = document.createElement("button");
+      modalChild1of1Btn.type = "button";
+      modalChild1of1Btn.setAttribute("class", "btn-close");
+      modalChild1of1Btn.setAttribute("data-bs-dismiss", "modal");
+      modalChild1of1Btn.setAttribute("aria-label", "Close");
+
+    // Modal Child 2 of Inner Child 1
+    const modalChild2of1 = document.createElement("div");
+    modalChild2of1.id = "modalChild2of1";
+    modalChild2of1.setAttribute("class", "modal-body text-center");
+    modalChild2of1.innerText = response;
+
+    const modalChild3of1 = document.createElement("div");
+    modalChild3of1.id = "modalChild3of1";
+    modalChild3of1.setAttribute("class", "modal-footer");
+
+    const modalChild3of1Btn = document.createElement("button");
+    modalChild3of1Btn.type = "button";
+    modalChild3of1Btn.setAttribute("class", "btn btn-success");
+    modalChild3of1Btn.setAttribute("data-bs-dismiss", "modal");
+    modalChild3of1Btn.innerText = "Close";
+
+  // Create Modals
+  document.body.appendChild(modalDisplay);
+  document.getElementById("modalDisplay").appendChild(modalChild0);
+  document.getElementById("modalChild0").appendChild(modalChild1);
+
+  document.getElementById("modalChild1").appendChild(modalChild1of1);
+  document.getElementById("modalChild1of1").appendChild(modalChild1of1H5);
+  document.getElementById("modalChild1of1").appendChild(modalChild1of1Btn);
+
+  document.getElementById("modalChild1").appendChild(modalChild2of1);
+
+  document.getElementById("modalChild1").appendChild(modalChild3of1);
+  document.getElementById("modalChild3of1").appendChild(modalChild3of1Btn);
+
+  // Kill the parent and children will follow
+  //modalDisplay.remove();
+}
+
+// callback response
+const checkCallbackResponse = async () => {
+
+  // Create modal trigger element
+  createTrigger();
+
+  // get dom element with id trigger
+  const modalTrigger = document.getElementById("trigger");
+
+  // response user add
+  if(window.location.href.includes("#userAddedTrue") && !window.location.href.includes("#refresh")){
+
+    response = "User added successfully!"; // set response string
+    createModal(response); // create modal and pass on the response
+    modalTrigger.click(); // trigger click event on button
+    window.open(window.location.href+"#refresh", '_self'); // change the url, add #refresh so that it wont do a callback function again
+
+  } else if(window.location.href.includes("#userAddedFalse") && !window.location.href.includes("#refresh")){
+
+    response = "User is not added to the database!";
+    createModal(response);
+    modalTrigger.click();
+    window.open(window.location.href+"#refresh", '_self');
+
+  }
+
+  // response user delete
+  if(window.location.href.includes("#userDeletedTrue") && !window.location.href.includes("#refresh")){
+
+    response = "User deleted successfully!";
+    createModal(response);
+    modalTrigger.click();
+    window.open(window.location.href+"#refresh", '_self');
+
+  } else if(window.location.href.includes("#userDeletedFalse") && !window.location.href.includes("#refresh")){
+
+    response = "User is not deleted in the database! \n\nIf user is an admin you cannot use admin panel to delete another admin, you can only delete admin data directly in the database. (For Security Purposes)";
+    createModal(response);
+    modalTrigger.click();
+    window.open(window.location.href+"#refresh", '_self');
+
+  } 
+
+  // response user reactivate
+  if(window.location.href.includes("#userReactivatedTrue") && !window.location.href.includes("#refresh")){
+
+    response = "User account is reactivated successfully!";
+    createModal(response);
+    modalTrigger.click();
+    window.open(window.location.href+"#refresh", '_self');
+
+  } else if(window.location.href.includes("#userReactivatedFalse") && !window.location.href.includes("#refresh")){
+
+    response = "User account is not reactivated!";
+    createModal(response);
+    modalTrigger.click();
+    window.open(window.location.href+"#refresh", '_self');
+
+  } 
+
+  // response user deactivate
+  if(window.location.href.includes("#userDeactivatedTrue") && !window.location.href.includes("#refresh")){
+
+    response = "User account is deactivated successfully!";
+    createModal(response);
+    modalTrigger.click();
+    window.open(window.location.href+"#refresh", '_self');
+
+  } else if(window.location.href.includes("#userDeactivatedFalse") && !window.location.href.includes("#refresh")){
+
+    response = "User account is not deactivated!";
+    createModal(response);
+    modalTrigger.click();
+    window.open(window.location.href+"#refresh", '_self');
+
+  } 
+
+  // response admin update pass
+  if(window.location.href.includes("#passUpdatedTrue") && !window.location.href.includes("#refresh")){
+
+    response = "Admin password updated successfully!";
+    createModal(response);
+    modalTrigger.click();
+    window.open(window.location.href+"#refresh", '_self');
+
+  } else if(window.location.href.includes("#passUpdatedFalse") && !window.location.href.includes("#refresh")){
+
+    response = "Admin password is not updated!";
+    createModal(response);
+    modalTrigger.click();
+    window.open(window.location.href+"#refresh", '_self');
+
+  } 
+}
+
+//  Method for checking time on what greetings will be shown to user
+const checkTime = (current) => {
+
+  // Array for the greetings
+  let greetsArr = ['Good Morning! 🌞', 'Good Afternoon! 🌇', 'Good Evening! 🌃'];
+  let greetings;
+
+  // check time using 24 hour format
+  if(current.getHours() >= 0 && current.getHours() <= 11) {
+      greetings = greetsArr[0];
+  } else if(current.getHours() >= 12 && current.getHours() <= 17) {
+      greetings = greetsArr[1];
+  } else {
+      greetings = greetsArr[2];
+  }
+
+  // return the greetings
+  return greetings;
+
+}
+
 export default function Home() {
 
   const navigate = useNavigate();
