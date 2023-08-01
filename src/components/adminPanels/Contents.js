@@ -344,7 +344,7 @@ function Contents() {
     };
 
     // Make the GET request to the server with query parameters for Form 1
-    axios.get('/admin/newpass', { params: queryParams })
+    axios.get(host+'admin/newpass', { params: queryParams })
       .then((response) => {
         // Handle the response from the server (if needed)
         console.log(response.data);
