@@ -78,7 +78,6 @@ const signOutUser = () => {
 
 function Sidebar() {
 
-  
 const navigate = useNavigate();
 
 function taketoBooking(){

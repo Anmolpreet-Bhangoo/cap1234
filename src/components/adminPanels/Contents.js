@@ -353,22 +353,6 @@ function Contents() {
       });
   };
 
-  const handleSubmitForm2 = (e) => {
-    e.preventDefault();
-
-    // Make the GET request to the server with query parameters for Form 2
-    axios.get('/api/data2', { params: formData2 })
-      .then((response) => {
-        // Handle the response from the server (if needed)
-        console.log(response.data);
-      })
-      .catch((error) => {
-        // Handle errors (if needed)
-        console.error(error);
-      });
-  };
-
-
   function User({ searchInput }) {
 
     // if search input is empty show all the data from database
