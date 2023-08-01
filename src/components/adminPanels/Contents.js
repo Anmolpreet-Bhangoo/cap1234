@@ -248,6 +248,16 @@ function Contents() {
   // server host
   const host = "https://back1234.onrender.com/";
 
+  const [formData, setFormData] = useState({
+    userId: '',
+    userEmail: '',
+    userPass: '',
+    userPassOld: '',
+    fName: '',
+    lName: '',
+    searchUID: '',
+  });
+
   // fetch backend data
   const [dataAdmin, setDataAdmin] = useState(null);
   const [dataUsers, setDataUsers] = useState(null);
@@ -318,15 +328,7 @@ function Contents() {
   }
 
   // form
-  const [formData, setFormData] = useState({
-    userId: '',
-    userEmail: '',
-    userPass: '',
-    userPassOld: '',
-    fName: '',
-    lName: '',
-    searchUID: '',
-  });
+  
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
