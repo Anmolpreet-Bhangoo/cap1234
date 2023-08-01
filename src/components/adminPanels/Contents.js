@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import cover from './images/cover.png';
 import './Contents.css';
-import Sidebar_Mobile from './Sidebar-mobile';
+
 
 // generate random number
 function generator() {
