@@ -339,8 +339,8 @@ function Contents() {
 
     // Extract only the specific keys you want to include as query parameters
     const queryParams = {
-      userid: adminUID,
-      password: formData.userPass,
+      userId: adminUID,
+      userNewPass: formData.userPass,
     };
 
     // Make the GET request to the server with query parameters for Form 1
