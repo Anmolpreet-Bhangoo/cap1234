@@ -123,9 +123,14 @@ export default function Home() {
             <label>Password</label>
 
             <input class="inputHomepage" required type="password" id="passwordLogin" name="password" placeholder="Enter your password" /><br />
-            <i className='showhide' id="showButton1" class="bi bi-eye" onClick={togglePasswordVisibility}></i>
-            <i className='showhide' id="showButton2" class="bi bi-eye-slash" onClick={togglePasswordVisibility}></i>
+            
+            <div id='showPassword' title='Show Password'>
+              <i className='showhide' id="showButton1" class="bi bi-eye" onClick={togglePasswordVisibility}></i>
+              <i className='showhide' id="showButton2" class="bi bi-eye-slash" onClick={togglePasswordVisibility}></i>
+            </div>
 
+            
+      
 
             <div className='postionFix'>
               <input className='boxes' type="submit" value="Log In" onClick={handleLogin} />

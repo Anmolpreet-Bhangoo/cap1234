@@ -14,17 +14,22 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 .div-signup{
-    padding:4%;
-    padding-bottom: 8%;
-    margin: auto;
-    border-radius: 26px;
-    height: 400px;
-    width: 500px;
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color: whitesmoke;
-    color:black;
-    border-width: thin;
-    font-weight: bold;
+  background-color: whitesmoke ;
+
+  background-position: center;
+
+  margin-left: 30%;
+
+  margin-right: 30%;
+
+  padding: 5%;  
+
+  padding-top: 1%;
+
+  border-radius: 5%;
+
+  font-family: 'Source Sans Pro', sans-serif;
+
   }
   
   .titleSignUp{
@@ -38,11 +43,28 @@
     }
     
   .titleSign{
-      margin-top:-10%;
+    text-align: center;
+
+    font-family: 'Source Sans Pro', sans-serif;
+  
+    color:#2D8D34;
+  
+    text-shadow: black 1px 0 70px;
+  
+    padding: 1%;
+  
+    font-weight: bold;
+  
+    padding-top: 2%;
   }
   .inside{
       font-weight: normal;
   }
+
+  .inside label{
+    text-align: left;
+    float: left;
+}
   
   .submitbox{
       
@@ -120,14 +142,22 @@
 }
 
 .inputSignUpPage[type=text],[type=email],[type=password] {
-  width: 340px;
+  width: 100%;
+
   padding-left:4%;
+
   height: 40px;
-  margin: 9px 0; 
+
+  margin: 3% 0;
+
   border-radius: 26px;
+
   background-color: whitesmoke;
+
   border-color: grey;
+
   font-family: 'Source Sans Pro', sans-serif;
+
   border-width: thin;
   } 
   
