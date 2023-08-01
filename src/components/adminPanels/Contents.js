@@ -248,21 +248,6 @@ function Contents() {
   // server host
   const host = "https://back1234.onrender.com/";
 
-  // form
-  const [formData, setFormData] = useState({
-    userId: '',
-    userEmail: '',
-    userPass: '',
-    userPassOld: '',
-    fName: '',
-    lName: '',
-    searchUID: '',
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   // fetch backend data
   const [dataAdmin, setDataAdmin] = useState(null);
   const [dataUsers, setDataUsers] = useState(null);
@@ -331,6 +316,57 @@ function Contents() {
     adminUID = dataAdmin[0].userid;
     console.log("Active Admin UID: " + adminUID);
   }
+
+  // form
+  const [formData, setFormData] = useState({
+    userId: '',
+    userEmail: '',
+    userPass: '',
+    userPassOld: '',
+    fName: '',
+    lName: '',
+    searchUID: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmitPasswordChange = (e) => {
+    e.preventDefault();
+
+    // Extract only the specific keys you want to include as query parameters
+    const queryParams = {
+      userid: adminUID,
+      password: formData.userPass,
+    };
+
+    // Make the GET request to the server with query parameters for Form 1
+    axios.get('/admin/newpass', { params: queryParams })
+      .then((response) => {
+        // Handle the response from the server (if needed)
+        console.log(response.data);
+      })
+      .catch((error) => {
+        // Handle errors (if needed)
+        console.error(error);
+      });
+  };
+
+  const handleSubmitForm2 = (e) => {
+    e.preventDefault();
+
+    // Make the GET request to the server with query parameters for Form 2
+    axios.get('/api/data2', { params: formData2 })
+      .then((response) => {
+        // Handle the response from the server (if needed)
+        console.log(response.data);
+      })
+      .catch((error) => {
+        // Handle errors (if needed)
+        console.error(error);
+      });
+  };
 
 
   function User({ searchInput }) {
@@ -409,7 +445,7 @@ function Contents() {
             <div id="settings">
                 <h1>Account Settings</h1>
 
-                <form method="GET" action={host+"admin/newpass?userId="+adminUID+"&userNewPass="+formData.userPass}>
+                <form onSubmit={handleSubmitPasswordChange}>
                     <b>Change Password</b><br/>
 
                     <input name="userId" type="text" value={dataAdmin[0].userid} hidden required />
