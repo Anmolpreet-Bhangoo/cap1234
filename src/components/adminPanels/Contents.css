@@ -1,11 +1,11 @@
 .Contents-bg {
-  width: 100%;
-  height: 100%;
+  width: 75%;
+  height: auto;
   overflow-x: hidden;
   background-image: url('images/bg.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 75% auto;
   background-attachment: fixed;
 }
 
