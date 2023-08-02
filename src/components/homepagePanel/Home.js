@@ -250,8 +250,8 @@ export default function Home() {
 
           // Check if the user is an admin based on the response
           if (data.isAdmin) {
-            navigate('/adminPanel'); // Redirect to signup page for admin
             setIsAdminLoggedIn(true);
+            navigate('/adminPanel'); // Redirect to signup page for admin
           } else {
             navigate('/bookTicket'); // Redirect to other page for non-admin users
           }
