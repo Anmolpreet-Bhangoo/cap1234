@@ -290,7 +290,7 @@ export default function Home() {
   }
 
   if (isAdminLoggedIn && window.location.href.includes("#refresh")) {
-    return <Redirect to='/adminPanel' />
+    navigate('/adminPanel');
   }
 
   return (
