@@ -5,9 +5,7 @@ import { useNavigate } from 'react-router-dom';
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap" rel="stylesheet">
 </link>
 
-
 let response = null;
-let i;
 
 // Method for creating modal trigger
 function createTrigger() {
@@ -195,27 +193,6 @@ const checkCallbackResponse = async () => {
   } 
 }
 
-//  Method for checking time on what greetings will be shown to user
-const checkTime = (current) => {
-
-  // Array for the greetings
-  let greetsArr = ['Good Morning! 🌞', 'Good Afternoon! 🌇', 'Good Evening! 🌃'];
-  let greetings;
-
-  // check time using 24 hour format
-  if(current.getHours() >= 0 && current.getHours() <= 11) {
-      greetings = greetsArr[0];
-  } else if(current.getHours() >= 12 && current.getHours() <= 17) {
-      greetings = greetsArr[1];
-  } else {
-      greetings = greetsArr[2];
-  }
-
-  // return the greetings
-  return greetings;
-
-}
-
 export default function Home() {
 
   const navigate = useNavigate();
@@ -309,7 +286,7 @@ export default function Home() {
   }
 
   return (
-    <div className='wholeHomePage'>
+    <div className='wholeHomePage' onLoad={checkCallbackResponse}>
       <div className='homepagelogin'>
 
         <div className='logo-Login'>
