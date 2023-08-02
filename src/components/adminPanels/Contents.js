@@ -397,6 +397,7 @@ function Contents() {
   }
 
   return (
+    <div className='Contents-bg'>
         <div className="Contents" id="Contents" onLoad={checkCallbackResponse}>
 
             <div id="default">
@@ -593,6 +594,7 @@ function Contents() {
             </div>
 
         </div>
+    </div>
   );
 }
 
