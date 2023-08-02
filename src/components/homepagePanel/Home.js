@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import logo from './photo/logo.png';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap" rel="stylesheet">
 </link>
 
