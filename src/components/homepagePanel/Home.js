@@ -5,10 +5,6 @@ import { useNavigate } from 'react-router-dom';
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap" rel="stylesheet">
 </link>
 
-function callbackAfterResponse(){
-  navigate("/adminPanel");
-}
-
 let response = null;
 
 // Method for creating modal trigger
@@ -202,6 +198,8 @@ export default function Home() {
 
   const navigate = useNavigate();
   // const [dataUsers, setDataUsers] = useState(null);
+  // admin callback
+  const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
 
   useEffect(() => {
     window.tiledeskSettings = {
@@ -254,6 +252,7 @@ export default function Home() {
           // Check if the user is an admin based on the response
           if (data.isAdmin) {
             navigate('/adminPanel'); // Redirect to signup page for admin
+            setIsAdminLoggedIn(true);
           } else {
             navigate('/bookTicket'); // Redirect to other page for non-admin users
           }
@@ -288,6 +287,10 @@ export default function Home() {
 
     }
 
+  }
+
+  if (isAdminLoggedIn && window.location.href.includes("#refresh")) {
+    return <Redirect to='/adminPanel' />
   }
 
   return (
