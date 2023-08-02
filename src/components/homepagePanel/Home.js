@@ -5,6 +5,10 @@ import { useNavigate } from 'react-router-dom';
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap" rel="stylesheet">
 </link>
 
+function callbackAfterResponse(){
+  navigate("/adminPanel");
+}
+
 let response = null;
 
 // Method for creating modal trigger
@@ -78,6 +82,7 @@ function createModal(response) {
     modalChild3of1Btn.type = "button";
     modalChild3of1Btn.setAttribute("class", "btn btn-success");
     modalChild3of1Btn.setAttribute("data-bs-dismiss", "modal");
+    modalChild3of1Btn.setAttribute("onClick", {callbackAfterResponse});
     modalChild3of1Btn.innerText = "Close";
 
   // Create Modals
