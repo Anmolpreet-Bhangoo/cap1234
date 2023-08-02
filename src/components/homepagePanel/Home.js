@@ -78,7 +78,6 @@ function createModal(response) {
     modalChild3of1Btn.type = "button";
     modalChild3of1Btn.setAttribute("class", "btn btn-success");
     modalChild3of1Btn.setAttribute("data-bs-dismiss", "modal");
-    modalChild3of1Btn.setAttribute("onClick", {callbackAfterResponse});
     modalChild3of1Btn.innerText = "Close";
 
   // Create Modals
