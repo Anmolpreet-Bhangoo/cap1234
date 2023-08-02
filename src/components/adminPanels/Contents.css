@@ -30,6 +30,14 @@
     overflow: hidden; 
 }
 
+#viewUsers th {
+    background-color: #04AA6D;
+}
+
+#viewUsers th, #viewUsers td {
+    border-bottom: 1px solid #000000 !important; 
+}
+
 #viewUsers th, #viewUsers td {
     border-bottom: 1px solid #FFF !important; 
 }

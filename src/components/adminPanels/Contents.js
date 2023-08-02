@@ -338,7 +338,7 @@ function Contents() {
     if(searchInput === null || searchInput === "") {
       return dataUsers.map((item) => (       
         <tr>
-          <th scope="row">{item.userid}</th>
+          <td scope="row">{item.userid}</td>
           <td scope="row">{item.firstName}</td>
           <td scope="row">{item.lastName}</td>
           <td scope="row">{item.email}</td>
@@ -374,7 +374,7 @@ function Contents() {
     // if data found show the data with the correct index of the data. if data index is equals or greaterthan zero means that is match
     if(dataIndex >= 0){
       return <tr>
-            <th scope="row">{dataUsers[dataIndex].userid}</th>
+            <td scope="row">{dataUsers[dataIndex].userid}</td>
             <td scope="row">{dataUsers[dataIndex].firstName}</td>
             <td scope="row">{dataUsers[dataIndex].lastName}</td>
             <td scope="row">{dataUsers[dataIndex].email}</td>
@@ -384,7 +384,7 @@ function Contents() {
           </tr>
     } else{
       return <tr>
-              <th scope="row">No Data</th>
+              <td scope="row">No Data</td>
               <td scope="row">No Data</td>
               <td scope="row">No Data</td>
               <td scope="row">No Data</td>
