@@ -5,6 +5,9 @@ import { useNavigate } from 'react-router-dom';
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap" rel="stylesheet">
 </link>
 
+
+/* === ADMIN PANEL FUNCTIONS === */
+
 let response = null;
 
 // Method for creating modal trigger
@@ -192,6 +195,8 @@ const checkCallbackResponse = async () => {
 
   } 
 }
+
+/* === ADMIN PANEL FUNCTIONS END === */
 
 export default function Home() {
 
