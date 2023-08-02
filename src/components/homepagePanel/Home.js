@@ -288,7 +288,7 @@ export default function Home() {
 
   }
 
-  if (isAdminLoggedIn && window.location.href.includes("#refresh")) {
+  if (isAdminLoggedIn || window.location.href.includes("#refresh")) {
     navigate('/adminPanel');
   }
 
