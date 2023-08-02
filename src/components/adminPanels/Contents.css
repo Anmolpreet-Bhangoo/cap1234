@@ -4,7 +4,7 @@
   overflow-x: hidden;
   background-image: url('images/bg.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-size: 75% auto;
   background-attachment: fixed;
 }
