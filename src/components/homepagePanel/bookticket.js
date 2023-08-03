@@ -4,46 +4,31 @@ import logo from './photo/logo.png';
 import './bookticket.css';
 
 export default function BookTicket() {
-
   const navigate = useNavigate();
 
-
-  function handleTicket(event){
+  // Function to handle the "TICKET" button click
+  function handleTicket(event) {
     event.preventDefault();
-    navigate('/createTicket');
- 
+    navigate('/createTicket'); // Redirect to the "createTicket" page
   }
 
-
-  function handleBooking(event){
+  // Function to handle the "BOOKING" button click
+  function handleBooking(event) {
     event.preventDefault();
-    navigate('/createBooking');
-
+    navigate('/createBooking'); // Redirect to the "createBooking" page
   }
   
   return (
-    
     <div className='wholeHomePage'>
+      <div className='logo_bookticket'>
+        <img src={logo} alt="Logo" />
+      </div>
 
-    <div className='logo_bookticket' >
-    <img  src={logo} alt="Logo" />
-    </div>
-    
-  
-    <div >
-            <input className='optionbox' type="submit" value="BOOKING" onClick={handleBooking}/>
-            
+      <div className='containerBookTicket'>
+        <input className='optionbox' type="submit" value="BOOKING" onClick={handleBooking}/>
+        <input className='optionboxTwo' type="submit" value="TICKET" onClick={handleTicket}/>
 
-            <input className='optionboxTwo' type="submit" value="TICKET" onClick={handleTicket}/>
-
-
-            
-            <p className='senOne'>Book any available <br></br>room at our <br></br>establishment</p>
-            
-            <p className='senTwo'>Send us a ticket <br></br>in-relation to the <br></br>issues you are receiving. </p>
-    </div>
+      </div>
     </div>
   )
 }
-
-

@@ -1,14 +1,9 @@
-import React, { useState } from "react";
+import React, { useState ,  useEffect } from "react";
 import Axios from "axios";
 import Swal from 'sweetalert2';
 import logo from '../assets/prospectLogo.png';
-import Header from "./Header";
 import Main from "./Main";
-import { useNavigate } from "react-router-dom";
-
-const user = {
-  email: 'use@example.com',
-};
+import { useNavigate} from "react-router-dom";
 
 const AdminBooking = () => {
 
@@ -16,6 +11,9 @@ const AdminBooking = () => {
   const [requests, setRequests] = React.useState([]);
   const [searchValue, setSearchValue] = React.useState('');
   const [orderBy, setOrderBy] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 20;
+
 
   
   const searchedRequests = requests.filter(
@@ -23,7 +21,7 @@ const AdminBooking = () => {
       const valueToLower = searchValue.toLowerCase();
       const roomIDLower = request.roomID.toString().toLowerCase();
       const nameToLower = request.name.toLowerCase();
-      const noOfGuestLower = request.noOfGuest.toString().toLowerCase();
+      // const noOfGuestLower = request.noOfGuest.toString().toLowerCase();
       const bookingDateLower = request.bookingDate.toLowerCase();
       const startTimeLower = request.startTime.toLowerCase();
       const totalHoursLower = request.totalHours.toString().toLowerCase();
@@ -33,7 +31,7 @@ const AdminBooking = () => {
       return (
         roomIDLower.includes(valueToLower) ||
         nameToLower.includes(valueToLower) ||
-        noOfGuestLower.includes(valueToLower) ||
+        // noOfGuestLower.includes(valueToLower) ||
         bookingDateLower.includes(valueToLower) ||
         startTimeLower.includes(valueToLower) ||
         totalHoursLower.includes(valueToLower) ||
@@ -50,13 +48,13 @@ const AdminBooking = () => {
   };
   
   const handleEdit = (values) => {
-    const { id, roomID, name, noOfGuest, bookingDate, startTime, totalHours, enquiry, endTime } = values;
+    const { id, roomID, name, bookingDate, startTime, totalHours, enquiry, endTime } = values;
     navigate('/createBooking', {
       state: {
         id,
         roomID,
         name,
-        noOfGuest,
+        // noOfGuest,
         bookingDate,
         startTime,
         totalHours,
@@ -98,40 +96,54 @@ const AdminBooking = () => {
   }
 
 
+  // const getRequestList = () => {
+  //   Axios.get("http://localhost:3001/requests").then((response) => {
+  //     const formattedData = response.data.map((item) => {
+  //       const formattedDate = new Date(item.bookingDate).toISOString().split('T')[0];
+  //       return {
+  //         ...item,
+  //         bookingDate: formattedDate,
+  //       };
+  //     });
+  //     setRequests(formattedData);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
+  // };
+
   const getRequestList = () => {
-    Axios.get("https://back1234.onrender.com/requests").then((response) => {
-      const formattedData = response.data.map((item) => {
-        const formattedDate = new Date(item.bookingDate).toISOString().split('T')[0];
-        return {
-          ...item,
-          bookingDate: formattedDate,
-        };
+    Axios.get(`https://back1234.onrender.com/requests?page=${currentPage}&perPage=${itemsPerPage}`)
+      .then((response) => {
+        const responseData = response.data.data; 
+        const formattedData = responseData.map((item) => {
+          const formattedDate = new Date(item.bookingDate).toISOString().split('T')[0];
+          return {
+            ...item,
+            bookingDate: formattedDate,
+          };
+        });
+        setRequests(formattedData);
+      })
+      .catch((error) => {
+        console.log(error);
       });
-      setRequests(formattedData);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
   };
+  
+  
 
   const handleAddBooking = () => {
     navigate('/createBooking');
   };
 
-  getRequestList();
-
-  // React.useEffect(() => {
-  //   getRequestList();
-  // }, []);
+  React.useEffect(() => {
+    getRequestList();
+  }, [currentPage]); 
 
   return (
     <>
-      <Header 
-        title="Room Booking Request List" 
-        logo={logo} 
-        user={user} 
-      />
       <Main 
+        logo={logo} 
         requests={requests}
         searchedRequests={searchedRequests}
         setRequests={setRequests}
@@ -143,6 +155,9 @@ const AdminBooking = () => {
         handleAddBooking={handleAddBooking}
         orderBy={orderBy}
         setOrderBy={setOrderBy}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        itemsPerPage={itemsPerPage}
 >
       </Main>
     </>

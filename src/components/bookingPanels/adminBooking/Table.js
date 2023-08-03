@@ -1,53 +1,56 @@
 import React from "react";
 import "./TableAdmin.css";
 
-function Table({ id, roomID, name, noOfGuest, bookingDate, startTime, totalHours, enquiry, endTime, isChecked, onSelect, handleEdit, toDelete }) {
+function Table({ id, roomID, name, bookingDate, startTime, endTime, totalHours, enquiry, isChecked, onSelect, handleEdit, toDelete }) {
   
   return (
     <tr
       className={isChecked ? "row-container-ab selected table-active" : "row-container-ab"}
       onClick={onSelect} 
     >
-      <td className="table-data-ab">{id}</td>
-      <td className="table-data-ab">{roomID}</td>
-      <td className="table-data-ab">{name}</td>
-      <td className="table-data-ab">{noOfGuest}</td>
-      <td className="table-data-ab">{bookingDate}</td>
-      <td className="table-data-ab">{startTime}</td>
-      <td className="table-data-ab">{totalHours}</td>
-      <td className="table-data-ab">{enquiry}</td>
-      <td className="table-data-ab">{endTime}</td>
-      <td className="table-data-ab">
+      <td className="table-data-ab hide-column-1">{id}</td>
+      <td className="table-data-ab hide-column-2">{roomID}</td>
+      <td className="table-data-ab hide-column-3">{name}</td>
+      {/* <td className="table-data-ab hide-column">{noOfGuest}</td> */}
+      <td className="table-data-ab hide-column-4">{bookingDate}</td>
+      <td className="table-data-ab hide-column-5">{startTime}</td>
+      <td className="table-data-ab hide-column-6">{endTime}</td>
+      <td className="table-data-ab hide-column-7">{totalHours}</td>
+      <td className="table-data-ab hide-column-8">{enquiry}</td>
+      <td className="table-data-ab hide-column-9">
         {isChecked && (
           <>
-            <button
-              type="button"
-              className="button-modify-ab"
-              onClick={() => {
-                handleEdit({
-                  id,
-                  roomID,
-                  name,
-                  noOfGuest,
-                  bookingDate,
-                  startTime,
-                  totalHours,
-                  enquiry,
-                  endTime,
-                });
-              }}
-            >
-              Edit
-            </button>
-            <button
-              type="button"
-              className="button-delete-ab"
-              onClick={() => {
-                toDelete(id, name);
-              }}
-            >
-              Delete
-            </button>
+            <div className="row-button-ab">
+              <button
+                type="button"
+                className="button-table-ab button-modify-ab"
+                onClick={() => {
+                  handleEdit({
+                    id,
+                    roomID,
+                    name,
+                    // noOfGuest,
+                    bookingDate,
+                    startTime,
+                    totalHours,
+                    enquiry,
+                    endTime,
+                  });
+                }}
+              >
+                Edit
+              </button>
+              <button
+                type="button"
+                className="button-table-ab button-delete-ab"
+                onClick={() => {
+                  toDelete(id, name);
+                }}
+              >
+                Delete
+              </button>
+            </div>
+            
           </>
         )}
       </td>

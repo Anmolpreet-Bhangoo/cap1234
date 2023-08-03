@@ -14,7 +14,7 @@ const BookingSubmitted = () => {
 
   return (
     <div className="bookingSubmitted">
-      <header id="ticketSubmittedHeader">
+      <header id="bookingSubmittedHeader">
         <img id="bookinglogoPic1" src={logo} alt="Logo" />
       </header>
       <br/>
