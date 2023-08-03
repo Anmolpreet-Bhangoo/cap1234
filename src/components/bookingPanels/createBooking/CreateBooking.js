@@ -1,8 +1,8 @@
+
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Axios from "axios";
 import Swal from "sweetalert2";
-import logo from "../assets/prospectLogo.png";
 <link
   href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap"
   rel="stylesheet"
@@ -16,7 +16,6 @@ export default function CreateBooking() {
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [roomID, setRoomID] = useState("");
-  const [noOfGuest, setNoOfGuest] = useState("");
   const [date, setDate] = useState("");
   const [time, setStartTime] = useState("");
   const [totalHours, setTotalHours] = useState("");
@@ -28,7 +27,6 @@ export default function CreateBooking() {
       setId(state.id || "");
       setName(state.name || "");
       setRoomID(state.roomID || "");
-      setNoOfGuest(state.noOfGuest || "");
       setDate(state.bookingDate || "");
       setStartTime(state.startTime || "");
       setTotalHours(state.totalHours || "");
@@ -37,61 +35,79 @@ export default function CreateBooking() {
     }
   }, [state]);
 
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //     Axios.post("http://localhost:3001/booking", {
+  //       roomID,
+  //       name,
+  //       date,
+  //       time,
+  //       totalHours,
+  //       enquiry,
+  //     })
+  //       .then((res) => {
+  //         console.log(res);
+  //         Swal.fire({
+  //           icon: 'success',
+  //           title: 'Booking Created Successfully'
+  //         })
+  //         navigate("/bookingSubmitted");
+  //       })
+  //       .catch((err) => Swal.fire({
+  //         icon: "error",
+  //         title: "This Room Is Already Booked Between err"
+  //       })
+  //       )
+  // }
   function handleSubmit(event) {
-    event.preventDefault();
-    Swal.fire({
-      icon: 'success',
-      title: 'Booking Created Successfully'
+  event.preventDefault();
+  Axios.post("https://back1234.onrender.com/booking", {
+    roomID,
+    name,
+    date,
+    time,
+    totalHours,
+    enquiry,
+  })
+    .then((res) => {
+      console.log(res);
+      Swal.fire({
+        icon: 'success',
+        title: 'Booking Created Successfully'
+      });
+      navigate("/bookingSubmitted");
     })
-    if (state) {
-      Axios.put(`https://back1234.onrender.com/booking/${id}`, {
-        roomID,
-        name,
-        noOfGuest,
-        date,
-        time,
-        totalHours,
-        enquiry,
-      })
-        .then((res) => {
-          console.log(res);
-          Swal.fire({
-            title: "<strong>Update completed.</strong>",
-            html: `<i> Booking request made by ${name} was included in successfully</i>`,
-            icon: "success",
-          }).then(() => {
-            navigate("/bookingSubmitted");
-          });
-        })
-        .catch((err) => console.log(err));
-    } else {
-      Axios.post("https://back1234.onrender.com/booking", {
-        roomID,
-        name,
-        noOfGuest,
-        date,
-        time,
-        totalHours,
-        enquiry,
-      })
-        .then((res) => {
-          console.log(res);
-          navigate("/bookingSubmitted");
-        })
-        .catch((err) => console.log(err));
-    }
-  }
+    .catch((err) => {
+      if (err.response && err.response.data) {
+        const { startTime, endTime } = err.response.data;
+        Swal.fire({
+          icon: "error",
+          title: `This Room Is Already Booked Between ${startTime} And ${endTime}. Kindly Book Another Room.`
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "An error occurred while processing your request."
+        });
+      }
+    });
+}
+
+  
 
   function handleCancel() {
     navigate("/viewBookings");
   }
+  function handleCancelToBookTicket(){
+    navigate("/bookTicket");
+  }
 
-  const update = () => {
+  const update = (event) => {
+    event.preventDefault();
     Axios.put("https://back1234.onrender.com/update", {
       id: id,
       roomID: roomID,
       name: name,
-      noOfGuest: noOfGuest,
       bookingDate: date,
       startTime: time,
       totalHours: totalHours,
@@ -121,20 +137,17 @@ export default function CreateBooking() {
 
   return (
     <>
-      <header className="header-ct">
-        <img id="webLogo-ct" src={logo} alt=""></img>
-        <h1 id="ticketHeader-ct">Create Booking</h1>
-      </header>
+     <div className="createBookingBackground">
 
       <div className="main-ct">
+      <header id="header-ct">
+        <h1>CREATE BOOKING</h1>
+      </header>
+
         <div className="form-ct">
-          <h2 className="welcome-ct">Welcome! John</h2>{" "}
-          <h2 className="welcome-ct">Email: John@example.com </h2>
-          <br />
           <div className="insideForm-ct">
             <form onSubmit={handleSubmit}>
-              <div>
-                <label className="label-ct">Name:</label>
+                <label className="label-ct">Name</label>
                 <input
                   type="text"
                   className="input-ct"
@@ -142,10 +155,8 @@ export default function CreateBooking() {
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                 ></input>
-                <br />
-              </div>
-              <div>
-                <label className="label-ct">Select Room Number:</label>
+
+                <label className="label-ct">Select Room Number</label>
                 <select
                   onChange={(e) => setRoomID(e.target.value)}
                   className="select-ct"
@@ -153,42 +164,16 @@ export default function CreateBooking() {
                   required
                 >
                   <option value="">Choose a Room Number</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
+                  <option value="Resource Centre">Resource Centre - Max Capacity (15 Person)</option>
+                  <option value="Business Centre 1">Business Centre 1 - Max Capacity (14 Person)</option>
+                  <option value="Business Centre 2">Business Centre 2 - Max Capacity (19 Person)</option>
+                  <option value="Business Centre 3">Business Centre 3 - Max Capacity (21 Person)</option>
+                  <option value="Room 1">Room 1 - Max Capacity (5 Person)</option>
+                  <option value="Room 2">Room 2 - Max Capacity (5 Person)</option>
+                  <option value="Room 3">Room 3 - Max Capacity (5 Person)</option>
                 </select>
-              </div>
-              <div>
-                <label className="label-ct">Select Number Of Guests:</label>
-                <select
-                  onChange={(e) => setNoOfGuest(e.target.value)}
-                  className="select-ct"
-                  value={noOfGuest}
-                  required
-                >
-                  <option value="">Choose Number Of Max Guests</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
 
-              <div>
-                <label className="label-ct">Date Of Booking:</label>
+                <label className="label-ct">Date Of Booking</label>
                 <input
                   type="date"
                   className="input-ct"
@@ -197,11 +182,8 @@ export default function CreateBooking() {
                   value={date}
                   required
                 ></input>
-                <br />
-              </div>
-
-              <div>
-                <label className="label-ct">Start Time:</label>
+             
+                <label className="label-ct">Start Time</label>
                 <input
                   type="time"
                   onChange={(e) => setStartTime(e.target.value)}
@@ -209,11 +191,8 @@ export default function CreateBooking() {
                   value={time}
                   required
                 ></input>
-                <br />
-              </div>
-
-              <div>
-                <label className="label-ct">Select Number Of Hours:</label>
+                
+                <label className="label-ct">Select Number Of Hours</label>
                 <select
                   onChange={(e) => setTotalHours(e.target.value)}
                   className="select-ct"
@@ -221,16 +200,15 @@ export default function CreateBooking() {
                   required
                 >
                   <option value="">Choose Number Of Hours</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
                   <option value="5">5</option>
                   <option value="6">6</option>
-                  <option value="7">until end of the day</option>
                 </select>
-              </div>
-
-              <div>
-                <label className="label-ct">Any enquiries or concerns:</label>
+          
+                <label className="label-ct">Any enquiries or concerns</label>
                 <textarea
                   className="textarea-ct"
                   cols="40"
@@ -239,12 +217,10 @@ export default function CreateBooking() {
                   onChange={(e) => setEnquiry(e.target.value)}
                   value={enquiry}
                 ></textarea>
-              </div>
-
-              <div className="submitButtonPos-ct">
+           
                 {state ? (
                   <>
-                    <button className="update-ct" type="submit" onClick={update}>
+                    <button className="update-ct" onClick={update}>
                       Update
                     </button>
                     <button className="cancel-ct" type="button" onClick={handleCancel}>
@@ -252,15 +228,19 @@ export default function CreateBooking() {
                     </button>
                   </>
                 ) : (
+                  <>
                   <input className="submit-ct" type="submit" value="Book Room!" />
+                  <button className="cancelToBookTicket-ct" type="button" onClick={handleCancelToBookTicket}> Cancel </button>
+                  </>
                 )}
-              </div>
             </form>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
 }
 
 export { CreateBooking };
+

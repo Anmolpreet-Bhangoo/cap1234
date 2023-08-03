@@ -1,403 +1,275 @@
- .logo-Login{
-
-  margin-left: 34%;
-
-  margin-top: 1%;
-
-  margin-right: center;
-
-  }
-
-
-
-
-.div-login{
-
-  background-color: whitesmoke ;
-
-  background-position: center;
-
-  margin-left: 30%;
-
-  margin-right: 30%;
-
-  padding: 5%;  
-
-  padding-top: 1%;
-
-  border-radius: 5%;
-
-  font-family: 'Source Sans Pro', sans-serif;
-
-  }
-
-
-
-
-  .h1-LoginTitle{
-
-  text-align: center;
-
-  font-family: 'Source Sans Pro', sans-serif;
-
-  color:#2D8D34;
-
-  text-shadow: black 1px 0 70px;
-
-  padding: 1%;
-
-  font-weight: bold;
-
+/* Styles for the logo in the login section */
+.logo-Login {
+  justify-content: center;
+  display: flex;
   padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/* Styles for the login container */
+.div-login {
+  background-color: whitesmoke;
+  background-position: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  padding: 5%;
+  padding-top: 1%;
+  border-radius: 5%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Styles for the login title */
+.h1-LoginTitle {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #2D8D34;
+  padding: 1%;
+  font-weight: bold;
+  padding-top: 2%;
+}
+
+/* Styles for the boxes in the login section */
+.boxes {
+  padding: 5%; 
+  padding-bottom: 4%;
+  margin-left: 17%;
+  border-radius: 26px;
+  width: 25%;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #2D8D34;
+  color: white;
+  border-width: 0;
+  font-weight: bold;
+}
+.boxes:hover{
+
+  background-color: #0c7c26; /* Change button color on hover */
+  transform: translateY(-2px); /* Add slight upward shift on hover */
+}
+
+/* Styles for the input elements in the login section */
+.inputHomepage,
+#emailLogin,
+#passwordLogin {
+  width: 100%;
+  padding-left: 4%;
+  height: 40px;
+  margin: 3% 0;
+  border-radius: 26px;
+  background-color: whitesmoke;
+  border-color: grey;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-width: thin;
+}
+
+/* Styles for the eye icon for password visibility */
+.bi-eye {
+  margin-left: 90%;
+}
+
+.bi-eye-slash {
+  margin-left: 90%;
+}
+
+/* Media Queries for responsiveness */
+
+@media screen and (max-width: 1801px) {
+
+  .boxes {
+    padding: 2%;
+    margin-left: 18%;
+    margin-right: 0.1%;
 
   }
-
- 
-
-.boxes{
-
-  padding:4%;
-
-  padding-bottom: 4%;
-
-  margin-left: 17%;
-
-  border-radius: 26px;
-
-  width: 25%;
-
-  font-family: 'Source Sans Pro', sans-serif;
-
-  background-color: #2D8D34;
-
-  color:white;
-
-  border-width: thin;
-
-  font-weight:bold;
 
 }
 
-.inputHomepage, #emailLogin, #passwordLogin{
+@media screen and (max-width: 1677px) {
+
+  .boxes {
+    margin-left: 14%;
+    margin-right: 0.1%;
+    height: 40px;
+    width: 100px;
+    padding: 2%;
+  }
+
+}
+
+
+@media screen and (max-width: 1585px) {
+
+  .boxes {
+    padding: 2%;
+    margin-left: 14%;
+    margin-right: 0.1%;
+
+  }
+
+}
+
+@media screen and (max-width: 1388px) {
+
+  .boxes {
+    padding: 2%;
+    margin-left: 10%;
+    margin-right: 0.1%;
+
+  }
+
+}
 
 
 
 
-  width: 100%;
+@media screen and (max-width: 1280px) {
 
-  padding-left:4%;
-
-  height: 40px;
-
-  margin: 3% 0;
-
+/* Styles for the login container */
+.div-login {
+  margin-left: 32%;
+  margin-right: 32%;
+  }
+.boxes {
+  padding: 2.2%; 
+  margin-left: 17%;
   border-radius: 26px;
+  width: 27%;
+}
 
-  background-color: whitesmoke;
+}
 
-  border-color: grey;
+@media screen and (max-width: 1249px) {
 
-  font-family: 'Source Sans Pro', sans-serif;
-
-  border-width: thin;
-
-
-
-
-  }
-
-  .bi-eye{
-
-    margin-left: 90%;
+  .boxes {
+    padding: 2%;
+    margin-left: 7%;
+    margin-right: 0.1%;
 
   }
 
+}
 
+@media screen and (max-width: 1164px) {
 
-
-  .bi-eye-slash{
-
-    margin-left: 90%;
+  .boxes {
+    padding: 2%;
+    margin-left: 5%;
+    margin-right: 0.1%;
 
   }
 
+}
 
-
-
-   
-
+/* Styles for smaller screens (max-width: 1108px) */
 @media screen and (max-width: 1108px) {
 
-    .logo-Login{
-
-    margin-left: 30%;
-
-     }
-
-    .div-login{
-
+  .div-login {
     margin-left: 28%;
-
     margin-right: 28%;
-
     height: 400px;
-
     font-size: 18px;
-
-    }
-
-    .inputHomepage[type=text],[type=password],[type=email]{
-
+  }
+  .inputHomepage[type=text],
+  [type=password],
+  [type=email] {
     font-size: small;
-
-    }
-
-   .boxes{
-
-    padding:2%;
-
+  }
+  .boxes {
+    padding: 2%;
     margin-left: 12%;
-
     margin-right: 10%;
-
     height: 40px;
-
     width: 100px;
-
-    }
-
-    .bi-eye{
-
+  }
+  .bi-eye {
     margin-left: 90%;
-
-    }
-
-   
-
-     .bi-eye-slash{
-
-       margin-left: 90%;
-
-   
-
-     }
-
   }
+  .bi-eye-slash {
+    margin-left: 90%;
+  }
+}
 
-
-
-
-  @media screen and (max-width: 1050px) {
-
-
-
-
-   .boxes{
-
+/* Styles for even smaller screens (max-width: 1050px) */
+@media screen and (max-width: 1050px) {
+  .boxes {
     margin-left: 10%;
-
     margin-right: 10%;
-
-    }
-
-   
-
   }
+}
 
-
-
-
-  @media screen and (max-width: 980px) {
-
-
-
-
-    .boxes{
-
-     margin-left: 10%;
-
-     margin-right: 8%;
-
-     }
-
-     .div-login{
-
-      font-size: 16px;
-
-      }
-
-   
-
-   }
-
-   @media screen and (max-width: 918px) {
-
-
-
-
-    .logo-Login{
-
-      margin-left: 28%;
-
-      }
-
-   
-
-     .div-login{
-
-      font-size: 16px;
-
-      margin-left: 25%;
-
-      margin-right: 25%;
-
-      }
-
- 
-
-   }
-
-   @media screen and (max-width: 780px) {
-
-    .logo-Login{
-
-      margin-left: 24%;
-
-      }
-
-   
-
-    .div-login{
-
-     font-size: 16px;
-
-     margin-left: 20%;
-
-     margin-right: 20%;
-
-     }
-
-     .boxes{
-
-      margin-left: 13%;
-
-      margin-right: 10%;
-
-      }
-
+/* Styles for smaller screens (max-width: 980px) */
+@media screen and (max-width: 980px) {
+  .boxes {
+    margin-left: 10%;
+    margin-right: 8%;
   }
-
-
-
-
-  @media screen and (max-width: 740px) {
-
-    .logo-Login{
-
-      margin-left: 23%;
-
-      }
-
-   
-
-    .div-login{
-
-     font-size: 16px;
-
-     margin-left: 18%;
-
-     margin-right: 18%;
-
-     }
-
-   
-
+  .div-login {
+    font-size: 16px;
   }
+}
 
-
-
-
-  @media screen and (max-width: 685.33px) {
-
-    .logo-Login{
-
-      margin-left: 20%;
-
-      }
-
-   
-
-    .div-login{
-
-     font-size: 16px;
-
-     margin-left: 15%;
-
-     margin-right: 15%;
-
-     }
-
-     .boxes{
-
-      margin-left: 15%;
-
-      margin-right: 5%;
-
-      }
-
+/* Styles for even smaller screens (max-width: 918px) */
+@media screen and (max-width: 918px) {
+  .div-login {
+    font-size: 16px;
+    margin-left: 25%;
+    margin-right: 25%;
   }
+}
 
-
-
-
-  @media screen and (max-width: 555.33px) {
-
-    .logo-Login{
-
-      margin-left: 14%;
-
-      }
-
-   
-
-    .div-login{
-
-     font-size: 16px;
-
-     margin-left: 15%;
-
-     margin-right: 15%;
-
-     }
-
-     .boxes{
-
-      margin-left: 11%;
-
-      margin-right: 5%;
-
-      }
-
+/* Styles for smaller screens (max-width: 780px) */
+@media screen and (max-width: 780px) {
+  .div-login {
+    font-size: 16px;
+    margin-left: 20%;
+    margin-right: 20%;
   }
-
-  @media screen and (max-width: 489.6px) {
-
-    .logo-Login{
-
-      margin-left: 10%;
-
-      }
-   
-
-    .div-login{
-
-     font-size: 16px;
-
-     margin-left: 12%;
-
-     margin-right: 12%;
-
-     }
-
-
+  .boxes {
+    margin-left: 13%;
+    margin-right: 10%;
   }
+}
+
+/* Styles for even smaller screens (max-width: 740px) */
+@media screen and (max-width: 740px) {
+  .div-login {
+    font-size: 16px;
+    margin-left: 18%;
+    margin-right: 18%;
+  }
+}
+
+/* Styles for smaller screens (max-width: 685.33px) */
+@media screen and (max-width: 685.33px) {
+  .div-login {
+    font-size: 16px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .boxes {
+    margin-left: 15%;
+    margin-right: 5%;
+  }
+}
+
+/* Styles for even smaller screens (max-width: 555.33px) */
+@media screen and (max-width: 555.33px) {
+  .div-login {
+    font-size: 16px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .boxes {
+    margin-left: 11%;
+    margin-right: 5%;
+  }
+}
+
+/* Styles for even smaller screens (max-width: 489.6px) */
+@media screen and (max-width: 489.6px) {
+  .div-login {
+    font-size: 16px;
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+}

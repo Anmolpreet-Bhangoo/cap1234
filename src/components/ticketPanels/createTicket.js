@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from './logo.png';
+import Swal from "sweetalert2";
 
 const CreateTicket = () => {
   const getInitialState = () => {
@@ -48,32 +48,37 @@ const CreateTicket = () => {
       },
     })
       .then((res) => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Ticket Issued Successfully'
+        })
         navigate("/ticketSubmitted");
         console.log(res);
       })
       .catch((err) => console.log(err));
   }
 
+  function goToHome(){
+    navigate("/");
+  }
+
 
   return (
+    <div id="creating">
+      <div id="formContainer">
+
     <div id="createTicket_issueTicket">
       
 
       <form  id="createTicket_form" onSubmit={handleSubmit}>
         <header id="createTicket_ticketHeader">
-        <nav>
-        <ul>
-        <li><img id="createTicket_logoPic" src={logo} alt="Logo" /></li>
           <li>  <h1 >Create Ticket</h1>   </li>
-          <li> <a href="/">Log Out</a> </li>
-        </ul>
-      </nav>
          
         </header>
 
         <br />
         <main id="createTicket_issueTicketMain">
-          <label id="createTicket_label" for="createTicket_inputTicketCategory">Issue Category:</label>
+          <label id="createTicket_label" for="createTicket_inputTicketCategory">Issue Category</label>
           <select
             id="createTicket_inputTicketCategory"
             name="category"
@@ -82,14 +87,14 @@ const CreateTicket = () => {
           >
             <option value="Technical">Technical</option>
             <option value="Water Issues">Water Issue</option>
-            <option value="other">Furniture</option>
-            <option value="other">Electrical</option>
-            <option value="other">Bathroom</option>
-            <option value="other">Flooring</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Bathroom">Bathroom</option>
+            <option value="Flooring">Flooring</option>
             <option value="other">Others</option>
           </select>
 
-          <label id="createTicket_label" for="createTicket_inputTicketPriority">Priority:</label>
+          <label id="createTicket_label" for="createTicket_inputTicketPriority">Priority</label>
           <select
             id="createTicket_inputTicketPriority"
             name="priority"
@@ -100,9 +105,7 @@ const CreateTicket = () => {
             <option value="Medium">Medium</option>
             <option value="High">High</option>
           </select>
-
-          <br />
-          <label  id="createTicket_label" for="createTicket_inputTicketSubject">Ticket Subject:</label>
+          <label  id="createTicket_label" for="createTicket_inputTicketSubject">Ticket Subject</label>
           <input
             type="text"
             id="createTicket_inputTicketSubject"
@@ -112,7 +115,7 @@ const CreateTicket = () => {
             required
           />
 
-          <label  id="createTicket_label" for="createTicket_inputTicketDescription">Description:</label>
+          <label  id="createTicket_label" for="createTicket_inputTicketDescription">Description</label>
           <textarea
             id="createTicket_inputTicketDescription"
             name="description"
@@ -130,10 +133,14 @@ const CreateTicket = () => {
 
  <input type="file" onChange={handleFile}/>
           <input type="submit" value="Issue Ticket" />
-          <input type="reset" value="Cancel" />
+          <input type="reset" value="Cancel" onClick={goToHome} />
         </main>
       </form>
       
+    </div>
+
+  </div>
+
     </div>
   );
 };
