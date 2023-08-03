@@ -3,7 +3,6 @@ import axios from 'axios';
 import cover from './images/cover.png';
 import './Contents.css';
 
-
 // generate random number
 function generator() {
   // string so we can store each number one by one
@@ -256,6 +255,7 @@ function Contents() {
     userPassOld: '',
     fName: '',
     lName: '',
+    isAdmin: '',
     searchUID: '',
   });
 
@@ -331,6 +331,7 @@ function Contents() {
     adminUID = dataAdmin[0].userid;
     console.log("Active Admin UID: " + adminUID);
   }
+
 
   function User({ searchInput }) {
 
@@ -483,7 +484,7 @@ function Contents() {
             <div id="addUser">
                 <h1>Add New user</h1>
 
-                <form method="GET" action={host+"user/new?userId="+formData.userId+"&userEmail="+formData.userEmail+"&userPass="+formData.userPass+"&fName="+formData.fName+"&lName="+formData.lName}>
+                <form method="GET" action={host+"user/new?userId="+formData.userId+"&userEmail="+formData.userEmail+"&userPass="+formData.userPass+"&fName="+formData.fName+"&lName="+formData.lName+"&isAdmin="+formData.isAdmin}>
 
                     <div>
                       <label for="userId">User ID: </label>
@@ -508,6 +509,15 @@ function Contents() {
                     <div>
                       <label for="lName">Last Name: </label>
                       <input id="lName" name="lName" class="form-control" type="text" value={formData.lName} placeholder="Enter Last Name" required onChange={handleChange} />
+                    </div>
+
+                    <div>
+                      <label for="isAdmin">Is admin?: </label>
+                      <select id="isAdmin" name='isAdmin' class="form-control" required onChange={handleChange}>
+                        <option selected disabled>Make this user an admin?</option>
+                        <option value="1">Yes, Make this user an admin</option>
+                        <option value="0">No, Don't make this user an admin</option>
+                      </select>
                     </div>
 
                     {/* <div>
