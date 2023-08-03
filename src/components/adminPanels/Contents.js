@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import cover from './images/cover.png';
 import './Contents.css';
-import Sidebar_Mobile from './Sidebar-mobile';
 
 // generate random number
 function generator() {
@@ -256,6 +255,7 @@ function Contents() {
     userPassOld: '',
     fName: '',
     lName: '',
+    isAdmin: '',
     searchUID: '',
   });
 
@@ -339,7 +339,7 @@ function Contents() {
     if(searchInput === null || searchInput === "") {
       return dataUsers.map((item) => (       
         <tr>
-          <th scope="row">{item.userid}</th>
+          <td scope="row">{item.userid}</td>
           <td scope="row">{item.firstName}</td>
           <td scope="row">{item.lastName}</td>
           <td scope="row">{item.email}</td>
@@ -375,7 +375,7 @@ function Contents() {
     // if data found show the data with the correct index of the data. if data index is equals or greaterthan zero means that is match
     if(dataIndex >= 0){
       return <tr>
-            <th scope="row">{dataUsers[dataIndex].userid}</th>
+            <td scope="row">{dataUsers[dataIndex].userid}</td>
             <td scope="row">{dataUsers[dataIndex].firstName}</td>
             <td scope="row">{dataUsers[dataIndex].lastName}</td>
             <td scope="row">{dataUsers[dataIndex].email}</td>
@@ -385,7 +385,7 @@ function Contents() {
           </tr>
     } else{
       return <tr>
-              <th scope="row">No Data</th>
+              <td scope="row">No Data</td>
               <td scope="row">No Data</td>
               <td scope="row">No Data</td>
               <td scope="row">No Data</td>
@@ -398,6 +398,7 @@ function Contents() {
   }
 
   return (
+    <div className='Contents-bg'>
         <div className="Contents" id="Contents" onLoad={checkCallbackResponse}>
 
             <div id="default">
@@ -447,8 +448,8 @@ function Contents() {
                 </div>
 
                 <div class="table-responsive">
-                <table class="table table-hover table-dark">
-                  <thead class="thead-dark">
+                <table class="table table-hover">
+                  <thead class="thead">
                     <tr>
                       <th scope="col">User ID</th>
                       <th scope="col">Firstname</th>
@@ -483,7 +484,7 @@ function Contents() {
             <div id="addUser">
                 <h1>Add New user</h1>
 
-                <form method="GET" action={host+"user/new?userId="+formData.userId+"&userEmail="+formData.userEmail+"&userPass="+formData.userPass+"&fName="+formData.fName+"&lName="+formData.lName}>
+                <form method="GET" action={host+"user/new?userId="+formData.userId+"&userEmail="+formData.userEmail+"&userPass="+formData.userPass+"&fName="+formData.fName+"&lName="+formData.lName+"&isAdmin="+formData.isAdmin}>
 
                     <div>
                       <label for="userId">User ID: </label>
@@ -508,6 +509,15 @@ function Contents() {
                     <div>
                       <label for="lName">Last Name: </label>
                       <input id="lName" name="lName" class="form-control" type="text" value={formData.lName} placeholder="Enter Last Name" required onChange={handleChange} />
+                    </div>
+
+                    <div>
+                      <label for="isAdmin">Is admin?: </label>
+                      <select id="isAdmin" name='isAdmin' class="form-control" required onChange={handleChange}>
+                        <option selected disabled>Make this user an admin?</option>
+                        <option value="1">Yes, Make this user an admin</option>
+                        <option value="0">No, Don't make this user an admin</option>
+                      </select>
                     </div>
 
                     {/* <div>
@@ -594,6 +604,7 @@ function Contents() {
             </div>
 
         </div>
+    </div>
   );
 }
 
