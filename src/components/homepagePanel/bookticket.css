@@ -1,551 +1,362 @@
-.optionbox, .optionboxTwo {
-
- 
-
-    padding: 2%;
-
- 
-
-    margin-top: 8%;
-
- 
-
+.optionbox,.optionboxTwo{
+    padding:2%;
+    padding-bottom: 5%;
+    /* margin-left:14%;
+    margin-right:5%;*/
+    margin-top: 8%; 
     border-radius: 40px;
-
- 
-
-    height: auto;
-
- 
-
-    width: 20%;
-
- 
-
+    height: 30px;
+    width: 300px;
     font-family: 'Source Sans Pro', sans-serif;
-
- 
-
-    font-size: 3vw;
-
- 
-
+    font-size: 30px;
     text-shadow: 1px 1px 2px black;
-
- 
-
     background-color: #2D8D34;
-
- 
-
-    color: white;
-
- 
-
+    color:white;
     border-width: 0;
-
- 
-
     font-weight: bold;
-
- 
-
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
- 
-
+}
+.optionbox{
+    margin-left: 20%;
+    
+}
+.optionboxTwo{
+    margin-left:10%;
 }
 
- 
-
-.optionbox:hover, .optionboxTwo:hover {
-
- 
-
- 
-
- 
-
-    background-color: #0c7c26; /* Change button color on hover */
-
- 
-
-    transform: translateY(-2px); /* Add slight upward shift on hover */
-
- 
-
+.logo_bookticket{
+    margin-left: 400px;
+    margin-top: 50px;
+    margin-right: 400px;
+    font-family: 'Source Sans Pro', sans-serif;
+   
+   }
+.senOne{
+ margin-left:-35%;
+ text-align: center;
+ color: white;
+ text-shadow: 1px 1px 2px black;
+ font-family: 'Source Sans Pro', sans-serif;
+ margin-top: 1%;
 }
 
- 
-
-.optionbox {
-
- 
-
-    margin-left: 55%;
-
- 
-
-    position: fixed;
-
- 
-
+.senTwo{
+    float: right;
+    margin-right: 27%;
+    text-align: center;
+    margin-top: -7.5%;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
- 
-
- 
-
- 
-
-.optionboxTwo {
-
- 
-
-    margin-left: 26%;
-
- 
-
-    position: fixed;
-
- 
-
-}
-
- 
-
- 
-
- 
-
-.logo_bookticket {
-
- 
-
-    justify-content: center;
-
- 
-
-    display: flex;
-
- 
-
-    padding-top: 2%;
-
- 
-
-    padding-bottom: 2%;
-
- 
-
-}
-
- 
-
- 
-
- 
-
- 
-
- 
-
-.wholeHomePage {
-
- 
-
+.wholeHomePage{
     background-image: linear-gradient(to bottom, rgb(146, 209, 109), rgb(25, 154, 13));
-
- 
-
-    position: fixed;
-
- 
-
-    background-position: cover;
-
- 
-
+    position:fixed;
+    background-position:cover;
     background-size: cover;
-
- 
-
     width: 100%;
-
- 
-
     height: 100%;
-
+  }
+.wholeHomePage {
+    height: 100%;
+  }
+  @media screen and (max-width: 1273px) {
+    .senTwo{
+    margin-right: 25%;
+    }
+   
+    }
+    @media screen and (max-width: 1269.33px) {
+        .senTwo{
+        margin-right: 28%;
+        }
+        .senOne{
+            margin-left:-37%;
+           }
+           .optionbox{
+            margin-left: 19%;
+            
+        }
+      
+        }
+    @media screen and (max-width: 1264px) {
+        .senTwo{
+        margin-right: 28%;
+        }
+        }
+    @media screen and (max-width: 1248px) {
+        .senTwo{
+        margin-right: 27%;
+        }
+        }
+    @media screen and (max-width: 1190px) {
+        .senTwo{
+        margin-right: 25%;
+        }
+        }
+@media screen and (max-width: 1122px) {
+    .senTwo{
+    margin-right: 22%;
+    margin-top: -8%;
+    }
+    .logo_bookticket{
+        margin-left: 380px;
+    }
+    .optionbox{
+        margin-left: 18%;    
+    }
+    .optionboxTwo{
+        margin-left:10%;
+    }
+    .senOne{
+        margin-left:-36%;
+    }   
+   .senTwo{
+        margin-right: 24%;    
+    }
+       
+}
+    
+@media screen and (max-width: 1086px) {
+    .senTwo{
+    margin-right: 22%;
+    }
  
+    }
+    @media screen and (max-width: 1086px) {
+    .senTwo{
+    margin-right: 22%;
+    }
+    .logo_bookticket{
+    margin-left: 340px;
+    }
+}
+@media screen and (max-width: 1043.33px) {
+    .senTwo{
+    margin-right: 20%;
+    margin-top: -8.9%;
+    }
+    .logo_bookticket{
+    margin-left: 330px;
+    }
+    .optionbox,.optionboxTwo{
+        padding-bottom: 6%;
 
+    }
+}
+@media screen and (max-width: 992px) {
+    .senTwo{
+    margin-right: 18%;
+    margin-top: -9%;
+    }
+    .logo_bookticket{
+    margin-left: 320px;
+    }
+   
+}
+@media screen and (max-width: 970px) {
+    .senTwo{
+    margin-right: 17%;
+    margin-top: -9%;
+    }
+    .logo_bookticket{
+    margin-left: 300px;
+    }
+   
 }
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-@media screen and (max-width: 1060px) {
-
- 
-
-    .optionbox {
-
- 
-
-        margin-left: 58%;
-
- 
-
-        position: fixed;
-
- 
-
-        width: 29%;
-
- 
-
+@media screen and (max-width: 928px) {
+    .senTwo{
+    margin-right: 13%;
+    margin-top: -9.5%;
     }
-
- 
-
+    .logo_bookticket{
+    margin-left: 200px;
+    }
    
-
- 
-
-    .optionboxTwo {
-
- 
-
-        margin-left: 14%;
-
- 
-
-        position: fixed;
-
- 
-
-        width: 29%;
-
- 
-
-    }
-
- 
-
 }
 
- 
-
-@media screen and (max-width: 934px) {
-
- 
-
-    .optionbox {
-
- 
-
-        margin-left: 33%;
-
- 
-
-        position: fixed;
-
- 
-
-        width: 35%;
-
-        margin-top: 3%;
-
+@media screen and (max-width: 931.33px) {
+    .senTwo{
+    margin-right: 16%;
+    margin-top: -9.5%;
     }
-
- 
-
-   
-
- 
-
-    .optionboxTwo {
-
- 
-
-        margin-left: 33%;
-
- 
-
-        position: fixed;
-
- 
-
-        width: 35%;
-
- margin-top: 20%;
-
+    .logo_bookticket{
+    margin-left: 250px;
     }
-
- 
-
+    .optionbox{
+        margin-left: 15%;    
+    }
 }
 
- 
-
- 
-
- 
-
-@media screen and (max-width: 888px) {
-
- 
-
-    .optionbox {
-
- 
-
-        margin-left: 30%;
-
- 
-
-        width: 40%;
-
- 
-
-        height: 17%;
-
- 
-
- 
-
- 
+@media screen and (max-width: 866px) {
+    .senTwo{
+    margin-right: 16%;
+    margin-top: -10%;
+    }
+    .logo_bookticket{
+    margin-left: 240px;
+    }
+    .optionbox{
+        margin-left: 12%;    
+    }
+    .senOne{
+        margin-left:-42%;
+       }
+    .optionbox,.optionboxTwo{
+    padding-bottom: 7%;
 
     }
+       
+}
 
- 
+@media screen and (max-width: 866px) {
+    .senTwo{
+    margin-right: 18%;
+    margin-top: -11%;
+    }
+    .logo_bookticket{
+    margin-left: 200px;
+    }
+    .optionbox{
+        margin-left: 9%;    
+    }
+    .senOne{
+        margin-left:-47%;
+       }
+    .optionbox,.optionboxTwo{
+    padding-bottom: 7%;
 
-   
+    }
+       
+}
 
- 
+@media screen and (max-width: 800px) {
+    .senTwo{
+    margin-right: 14%;
+    margin-top: -11%;
+    }
 
-    .optionboxTwo {
-
- 
-
-        margin-left: 30%;
-
- 
-
-        width: 40%;
-
- 
-
-        margin-top: 23%;
-
- 
-
-        height: 17%;
-
- 
-
-        margin-top: 25%;
-
- 
-
+    }
        
 
- 
+
+@media screen and (max-width: 796px) {
+    .senTwo{
+    margin-right: 15%;
+    margin-top: -11%;
+    }
+    .logo_bookticket{
+    margin-left: 200px;
+    }
+    .optionbox{
+        margin-left: 7%;    
+    }
+    .senOne{
+        margin-left:-47%;
+       }
+    .optionbox,.optionboxTwo{
+    padding-bottom: 7.5%;
 
     }
-
- 
-
+       
 }
 
- 
-
-@media screen and (max-width: 883px) {
-
- 
-
-    .optionbox {
-
-        margin-left: 30%;
-
-        width: 40%;
-
-        height: 16%;
-
-        margin-top: 8%;
-
-        font-size: 5vw;
+@media screen and (max-width: 796px) {
+    .senTwo{
+    margin-right: 13%;
+    margin-top: -11%;
+    }
+    .logo_bookticket{
+    margin-left: 150px;
+    }
+    .optionbox{
+        margin-left: 5%;    
+    }
+    .senOne{
+        margin-left:-47%;
+       }
+    .optionbox,.optionboxTwo{
+    padding-bottom: 7.5%;
 
     }
+       
+}
 
- 
+@media screen and (max-width: 716px) {
+    .senTwo{
+        visibility: hidden;
+    }
+    .logo_bookticket{
+    margin-left: 150px;
+    }
+     .optionbox{
+        margin-left: 30%; 
+    
+    }
+    .optionboxTwo
+    {
+        margin-left: 30%; 
+    } 
+    .senOne{
+        visibility: hidden;
+       }
+    .optionbox,.optionboxTwo{
+        padding-bottom: 8%;
+    }
+    }
+       
 
+@media screen and (max-width: 648px) {
    
-
- 
-
-    .optionboxTwo {
-
-        margin-left: 30%;
-
-        width: 40%;
-
-        font-size: 5vw;
-
-        margin-top: 15%;
-
-        height: 17%;
-
-        margin-top: 30%;
-
-    }
-
- 
-
-}
-
- 
-
- 
-
-@media screen and (max-width: 711.33px) {
-
- 
-
-    .optionbox {
-
- 
-
-        font-size: 4vw;
-
- 
-
-    }
-
- 
-
+        .logo_bookticket{
+        margin-left: 130px;
+        }
+         .optionbox{
+            margin-left: 29%; 
+        
+        }
+        .optionboxTwo
+        {
+            margin-left: 29%; 
+        } 
    
+        .optionbox,.optionboxTwo{
+            padding-bottom: 9%;
+        }
+        }
+    @media screen and (max-width: 576px) {
 
- 
+        .logo_bookticket{
+        margin-left: 90px;
+        }
+        .optionbox{
+        margin-left: 25%;     
+        }
+        .optionboxTwo
+       {
+        margin-left: 25%; 
+        } 
+     
+        .optionbox,.optionboxTwo{
+        padding-bottom: 10%;
+        }
+        }
+ @media screen and (max-width: 576px) {
 
-    .optionboxTwo {
-
- 
-
-        margin-top: 30%;
-
- 
-
-        font-size: 4vw;
-
- 
-
+    .logo_bookticket{
+    margin-left: 50px;
     }
-
- 
-
-}
-
- 
-
-@media screen and (max-width: 613px) {
-
-    .optionbox {
-
-        font-size: 5.5vw;
-
+    .optionbox{
+    margin-left: 20%;     
     }
-
- 
-
-    .optionboxTwo {
-
-        margin-top: 39%;
-
-        font-size: 5.5vw;
-
+    .optionboxTwo
+    {
+    margin-left: 20%; 
+    } 
+    .optionbox,.optionboxTwo{
+    padding-bottom: 12%;
     }
-
- 
-
-}
-
- 
-
- 
-
-@media screen and (max-width: 548px) {
-
- 
-
-    .optionbox {
-
- 
-
-        font-size: 6vw;
-
- 
-
-        width: 47%;
-
- 
-
-        margin-left: 27%;
-
- 
-
- 
-
- 
-
- 
-
- 
-
-    }
-
- 
-
-   
-
- 
-
-    .optionboxTwo {
-
- 
-
-        margin-top: 35%;
-
- 
-
-        font-size: 6vw;
-
- 
-
-        width: 47%;
-
- 
-
-        margin-left: 27%;
-
- 
-
- 
-
- 
-
-    }
-
- 
-
-}
+    }   
+    
