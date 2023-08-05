@@ -303,7 +303,7 @@ export default function Home() {
   }
   // Rendering the login page content
   return (
-    <div className='wholeHomePage'>
+    <div className='wholeHomePage' onLoad={checkCallbackResponse}>
       <div className='homepagelogin'>
         <div className='logo-Login'>
           <img src={logo} alt="Logo" />
@@ -358,3 +358,6 @@ export default function Home() {
     </div>
   );
 }
+
+
+
