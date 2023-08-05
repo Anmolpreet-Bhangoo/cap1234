@@ -1,408 +1,275 @@
- .logo-Login{
-
-  margin-left: 34%;
-
-  margin-top: 1%;
-
-  margin-right: center;
-
-  }
-
-#showPassword {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    cursor: pointer;
-  }
-
-
-.div-login{
-
-  background-color: whitesmoke ;
-
-  background-position: center;
-
-  margin-left: 30%;
-
-  margin-right: 30%;
-
-  padding: 5%;  
-
+/* Styles for the logo in the login section */
+.logo-Login {
+  justify-content: center;
+  display: flex;
   padding-top: 1%;
-
-  border-radius: 5%;
-
-  font-family: 'Source Sans Pro', sans-serif;
-
-  }
-
-
-
-
-  .h1-LoginTitle{
-
-  text-align: center;
-
-  font-family: 'Source Sans Pro', sans-serif;
-
-  color:#2D8D34;
-
-  text-shadow: black 1px 0 70px;
-
-  padding: 1%;
-
-  font-weight: bold;
-
-  padding-top: 2%;
-
-  }
-
- 
-
-.boxes{
-
-  padding:4%;
-
-  padding-bottom: 4%;
-
-  margin-left: 17%;
-
-  border-radius: 26px;
-
-  width: 25%;
-
-  font-family: 'Source Sans Pro', sans-serif;
-
-  background-color: #2D8D34;
-
-  color:white;
-
-  border-width: thin;
-
-  font-weight:bold;
-
+  padding-bottom: 0.5%;
 }
 
-.inputHomepage, #emailLogin, #passwordLogin{
-
-
-
-
-  width: 100%;
-
-  padding-left:4%;
-
-  height: 40px;
-
-  margin: 3% 0;
-
-  border-radius: 26px;
-
+/* Styles for the login container */
+.div-login {
   background-color: whitesmoke;
+  background-position: center;
+  margin: 5%;
+  margin-left:32%;
+  padding: 5%;
+  margin-top: -1%;
+  padding-top: 1%;
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 37%;
+  height: 76%;
+}
+.homeLabel{
+  font-family: 'Lato', sans-serif;
+font-weight: bolder;
+color: #2C3E50;
+font-size: large;
+}
 
-  border-color: grey;
+/* Styles for the login title */
+.h1-LoginTitle {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #3DAD58;
+  padding: 1%;
+  font-weight: bold;
+  padding-top: 2%;
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add text shadow */
+}
 
-  font-family: 'Source Sans Pro', sans-serif;
+.boxesLogin {
+  background-color: #3dad58; 
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  padding: 12px 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.2s;
+} 
 
-  border-width: thin;
+.boxesSignUp{
+  background-color: #e74c3c; /* Use a different color for the buttons */
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  padding: 12px 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Add shadow and depth to buttons */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Styles for the input elements in the login section */
+.inputHomepage,
+#emailLogin,
+#passwordLogin {
+  width: 100%;
+  padding-left: 4%;
+  height: 40px;
+  margin: 3% 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+/* Styles for the eye icon for password visibility */
+
+.password-field-container {
+  position: relative;
+}
+
+.showhide {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.boxesLogin:hover {
+  background-color: #20c948; /* Change button color on hover */
+  transform: translateY(-2px); /* Add slight upward shift on hover */
+}
+.boxesSignUp:hover{
+  background-color: #c0392b; /* Change button color on hover */
+  transform: translateY(-2px); /* Add slight upward shift on hover */
+}
+
+/* Styling for the alert message */
+.alertMessage {
+  background-color: #4caf50; /* Green background color */
+  color: white; /* White text color */
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+}
 
 
+@media screen and (max-width: 820px) {
+  .div-login {
+    width: 48%;
+   
+  }
+}
 
+@media screen and (max-width: 986px) {
+  .div-login {
+    background-color: whitesmoke;
+    background-position: center;
+    margin: 5%;
+    margin-left:28%;
+    padding: 5%;
+    margin-top: -1%;
+    padding-top: 1%;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 45%;
 
   }
+}
+@media screen and (max-width: 1200px) {
+  .div-login {
+    width: 35%;
+    
+  }
+}
 
-  .bi-eye{
+@media screen and (max-width: 1375px) {
+  .div-login {
+    width: 35%;
+    
+  }
+}
 
-    margin-left: 90%;
+@media screen and (max-width: 1410px) {
+  .div-login {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 1469px) {
+  .div-login {
+    width: 32%;
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  .div-login {
+    width: 32%;
+  }
+}
+
+
+@media screen and (max-width: 1629px) {
+  .div-login {
+    width: 32%;
+  }
+}
+
+@media screen and (max-width: 1929px) {
+  .div-login {
+    width: 28%;
+    margin-left: 36%;
+    height: 500px;
+    margin-top: 2%;
+  }
+}
+
+@media screen and (max-width: 1298px) {
+  .div-login {
+    background-color: whitesmoke;
+    background-position: center;
+    margin: 5%;
+    margin-left:31%;
+    padding: 5%;
+    margin-top: -1%;
+    padding-top: 1%;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 37%;
 
   }
+}
 
-
-
-
-  .bi-eye-slash{
-
-    margin-left: 90%;
+@media screen and (max-width: 1280px) {
+  .div-login {
+   height: 77%;
 
   }
-
-
-
-
-   
-
-@media screen and (max-width: 1108px) {
-
-    .logo-Login{
-
-    margin-left: 30%;
-
-     }
-
-    .div-login{
-
-    margin-left: 28%;
-
-    margin-right: 28%;
-
-    height: 400px;
-
-    font-size: 18px;
-
-    }
-
-    .inputHomepage[type=text],[type=password],[type=email]{
-
-    font-size: small;
-
-    }
-
-   .boxes{
-
-    padding:2%;
-
-    margin-left: 12%;
-
-    margin-right: 10%;
-
-    height: 40px;
-
-    width: 100px;
-
-    }
-
-    .bi-eye{
-
-    margin-left: 90%;
-
-    }
-
-   
-
-     .bi-eye-slash{
-
-       margin-left: 90%;
-
-   
-
-     }
+}
+@media screen and (max-width: 910px) {
+  .div-login {
+    background-color: whitesmoke;
+    background-position: center;
+    margin: 5%;
+    margin-left:25%;
+    padding: 5%;
+    margin-top: -1%;
+    padding-top: 1%;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 49%;
+    
 
   }
+}
 
-
-
-
-  @media screen and (max-width: 1050px) {
-
-
-
-
-   .boxes{
-
-    margin-left: 10%;
-
-    margin-right: 10%;
-
-    }
-
-   
+@media screen and (max-width: 710px) {
+  .div-login {
+    background-color: whitesmoke;
+    background-position: center;
+    margin: 5%;
+    margin-left:20%;
+    padding: 5%;
+    margin-top: -1%;
+    padding-top: 1%;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 60%;
 
   }
+}
 
-
-
-
-  @media screen and (max-width: 980px) {
-
-
-
-
-    .boxes{
-
-     margin-left: 10%;
-
-     margin-right: 8%;
-
-     }
-
-     .div-login{
-
-      font-size: 16px;
-
-      }
-
-   
-
-   }
-
-   @media screen and (max-width: 918px) {
-
-
-
-
-    .logo-Login{
-
-      margin-left: 28%;
-
-      }
-
-   
-
-     .div-login{
-
-      font-size: 16px;
-
-      margin-left: 25%;
-
-      margin-right: 25%;
-
-      }
-
- 
-
-   }
-
-   @media screen and (max-width: 780px) {
-
-    .logo-Login{
-
-      margin-left: 24%;
-
-      }
-
-   
-
-    .div-login{
-
-     font-size: 16px;
-
-     margin-left: 20%;
-
-     margin-right: 20%;
-
-     }
-
-     .boxes{
-
-      margin-left: 13%;
-
-      margin-right: 10%;
-
-      }
+@media screen and (max-width: 500px) {
+  .div-login {
+    background-color: whitesmoke;
+    background-position: center;
+    margin: 5%;
+    margin-left:15%;
+    padding: 5%;
+    margin-top: -1%;
+    padding-top: 1%;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 70%;
 
   }
-
-
-
-
-  @media screen and (max-width: 740px) {
-
-    .logo-Login{
-
-      margin-left: 23%;
-
-      }
-
-   
-
-    .div-login{
-
-     font-size: 16px;
-
-     margin-left: 18%;
-
-     margin-right: 18%;
-
-     }
-
-   
-
-  }
-
-
-
-
-  @media screen and (max-width: 685.33px) {
-
-    .logo-Login{
-
-      margin-left: 20%;
-
-      }
-
-   
-
-    .div-login{
-
-     font-size: 16px;
-
-     margin-left: 15%;
-
-     margin-right: 15%;
-
-     }
-
-     .boxes{
-
-      margin-left: 15%;
-
-      margin-right: 5%;
-
-      }
-
-  }
-
-
-
-
-  @media screen and (max-width: 555.33px) {
-
-    .logo-Login{
-
-      margin-left: 14%;
-
-      }
-
-   
-
-    .div-login{
-
-     font-size: 16px;
-
-     margin-left: 15%;
-
-     margin-right: 15%;
-
-     }
-
-     .boxes{
-
-      margin-left: 11%;
-
-      margin-right: 5%;
-
-      }
-
-  }
-
-  @media screen and (max-width: 489.6px) {
-
-    .logo-Login{
-
-      margin-left: 10%;
-
-      }
-   
-
-    .div-login{
-
-     font-size: 16px;
-
-     margin-left: 12%;
-
-     margin-right: 12%;
-
-     }
-
-
-  }
+}

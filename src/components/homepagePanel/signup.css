@@ -1,378 +1,393 @@
-.wholeHomePage{
+/* Styling for the whole home page */
+.wholeHomePage {
   background-image: linear-gradient(to bottom, rgb(146, 209, 109), rgb(25, 154, 13));
-  position:fixed;
-  background-position:cover;
+  position: fixed;
+  background-position: cover;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
-.logoSignUpPage{
-  margin-left: 437px;
-  margin-top: 20px;
-  margin-right: center;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-.div-signup{
-  background-color: whitesmoke ;
-
-  background-position: center;
-
-  margin-left: 30%;
-
-  margin-right: 30%;
-
-  padding: 5%;  
-
+/* Styling for the logo and sign-up page section */
+.logoSignUpPage {
+  justify-content: center;
+  display: flex;
   padding-top: 1%;
-
-  border-radius: 5%;
-
-  font-family: 'Source Sans Pro', sans-serif;
-
-  }
+  padding-bottom: 0.5%;
   
-  .titleSignUp{
-     text-align: center;
-     font-family: 'Source Sans Pro', sans-serif;
-     color:#2D8D34;
-     
-     padding: 1%;
-     font-weight: bold;
-     padding-top: 2%;
-    }
-    
-  .titleSign{
-    text-align: center;
-
-    font-family: 'Source Sans Pro', sans-serif;
-  
-    color:#2D8D34;
-  
-    text-shadow: black 1px 0 70px;
-  
-    padding: 1%;
-  
-    font-weight: bold;
-  
-    padding-top: 2%;
-  }
-  .inside{
-      font-weight: normal;
-  }
-
-  .inside label{
-    text-align: left;
-    float: left;
-}
-  
-  .submitbox{
-      
-          padding:4%;
-          padding-bottom: 8%;
-          padding-top: 3%;
-          
-          margin-left: 30%;
-          border-radius: 26px;
-          height: 40px;
-          width: 100px;
-          font-family: 'Source Sans Pro', sans-serif;
-          background-color: #2D8D34;
-          color:white;
-          border-width: thin;
-          font-weight: bold;
-          margin-bottom: 5%;
-        
-  }
-  .SignUpForm{
-      margin-left:2%;
-  }
-  .makeCenter{
-      margin-left: 5%;
-  }
-  .alertMessage {
-    background-color: #4caf50; /* Green background color */
-    color: white; /* White text color */
-    text-align: center;
-    padding: 10px;
-    margin-top: 10px;
-  }
-  /* width */
-  ::-webkit-scrollbar {
-      width: 5px;
-    }
-    
-    /* Track */
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey; 
-      border-radius: 5px;
-    }
-     
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: #2D8D34; 
-      border-radius: 5px;
-    }
-    
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: rgb(77, 154, 73); 
-    }
-
-.showhide{
-  background-image: url("./photo/eye_resized.png");
-  background-color: transparent;
-  border-width: 0px;
-  height: 20px;
-  width: 20px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position:relative;
-  padding-bottom: 2%;
-  bottom:30%;
-  right:37%;
-}
-   
-    /* hidden by default */
-
-#showButton2 {
-
-  display: none;
-
 }
 
-.inputSignUpPage[type=text],[type=email],[type=password] {
-  width: 100%;
-
-  padding-left:4%;
-
-  height: 40px;
-
-  margin: 3% 0;
-
-  border-radius: 26px;
-
+/* Styling for the sign-up container */
+.div-signup {
   background-color: whitesmoke;
-
-  border-color: grey;
-
-  font-family: 'Source Sans Pro', sans-serif;
-
-  border-width: thin;
-  } 
-  
-  .eyeIconI{
-    margin-left: -120%;
-  }
-  @media screen and (max-width: 1274px) {
-  
-    .eyeIconI{
-      margin-left: -40%;
-    } 
-}
-  @media screen and (max-width: 1190px) {
-    .logoSignUpPage{
-      margin-left: 390px;
-     
-    }
-    .eyeIconI{
-      margin-left: -330%;
-    }
-    #passwordLoginSignup{
-      width: 340px;
-    }
- 
-      
-    }
-
-    @media screen and (max-width: 1116px) {
-      .logoSignUpPage{
-      margin-left: 350px; 
-      }
-      .eyeIconI{
-       margin-left: -220%;
-      }
-     
-  }
-  @media screen and (max-width: 1105.33px) {
-    .logoSignUpPage{
-    margin-left: 350px; 
-    }
-    .eyeIconI{
-     margin-left: -230%;
-    }
-   
+  background-position: center;
+  margin-left:31%;
+  padding-left: 3%;
+  margin-top: -1%;
+  padding-top: 1%;
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 37%;
+  height: 70%;
+  position: relative;
 }
 
-@media screen and (max-width: 1111.33px) {
-  .logoSignUpPage{
-  margin-left: 350px; 
-  }
-  .eyeIconI{
-   margin-left: -230%;
-  }
- 
+/* Styling for the title in the sign-up container */
+.titleSignUp {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #3DAD58;
+  margin-left: -5%;
+  padding: 1%;
+  font-weight: bold;
+  padding-top: 2%;
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add text shadow */
 }
-@media screen and (max-width: 1020px) {
-  .logoSignUpPage{
-    margin-left: 310px;
-   
-  }
-  .eyeIconI{
-    margin-left: -210%;
-  }
-  #passwordLoginSignup{
-    width: 340px;
-  }
+
+/* Styling for the inside content of the sign-up container */
+.inside {
+   font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  color: #2C3E50;
+font-size: large;
+
+
 
 }
 
-@media screen and (max-width: 938px) {
-  .logoSignUpPage{
-    margin-left: 270px;
-   
-  }
-  .eyeIconI{
-    margin-left: -210%;
-  }
-  #passwordLoginSignup{
-    width: 340px;
-  }
-  .titleSignUp{
-    
-    padding-top: 5%;
-      } 
-  }
-
-  @media screen and (max-width: 915.33px) {
-    .logoSignUpPage{
-      margin-left: 270px;
-     
-    }
-    .eyeIconI{
-      margin-left: -150%;
-    }
-    #passwordLoginSignup{
-      width: 340px;
-    }
-    .titleSignUp{
-      
-      padding-top: 5%;
-     
-        }
-
-      .div-signup{
-      padding:4%;
-      height: 380px;
-      width: 490px;
-
-        }
-      
-    }
-
-    @media screen and (max-width: 844px) {
-      .logoSignUpPage{
-        margin-left: 220px;
-       
-      }
-      .div-signup{
-        padding:4%;
-        height: 360px;
-        width: 490px;
-  
-          }
-      
-  }
-  
-  @media screen and (max-width: 778px) {
-    .logoSignUpPage{
-      margin-left: 180px; 
-    }
-    .div-signup{
-      padding:4%;
-      height: 380px;
-      width: 490px;
-    }
-    .titleSignUp{
-    padding-top: 8%;  
-    }
-    
-    
+/* Styling for the submit button */
+.submitbox {
+  background-color: #3dad58; 
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 10%;
+  border-radius: 6px;
+  width: 90%;
+  margin-top: 8%;
+  padding: 12px 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.2s;
+}
+.submitbox:hover{
+  background-color: #20c948; /* Change button color on hover */
+  transform: translateY(-2px); /* Add slight upward shift on hover */
 }
 
-  @media screen and (max-width: 753.33px) {
-    .logoSignUpPage{
-      margin-left: 180px; 
+
+
+/* Styling for centering elements */
+.makeCenter {
+  margin-left: 5%;
+}
+
+/* Styling for the alert message */
+.alertMessage {
+  background-color: #4caf50; /* Green background color */
+  color: white; /* White text color */
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Styling for customizing scrollbar width */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2D8D34;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(77, 154, 73);
+}
+
+/* Styling for hiding a specific button */
+#showButtonSignUp2 {
+  display: none;
+}
+
+/* Styling for input fields (text, email, and password) in the sign-up page */
+.inputSignUpPage[type=text],
+[type=email],
+[type=password] {
+  width: 100%;
+  padding-left: 4%;
+  height: 40px;
+  margin: 3% 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+/* Styling for the password input field in the sign-up page */
+#passwordLoginSignup {
+  width: 100%;
+  padding-left: 4%;
+  height: 40px;
+  margin: 3% 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+/* Styling for the label container */
+.labelContainer {
+  text-align: left;
+  width: 100%;
+}
+/* Styles for the eye icon for password visibility */
+
+.password-field-container {
+  position: relative;
+}
+
+.showhide {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+@media screen and (max-width: 1536px) {
+  .div-signup {
+    margin-left:32.5%;
+     width: 35%;
+  }
+  #showButtonSignUp1, #showButtonSignUp2{
+
+    margin-top: 5%;
+    margin-right: 22%;
+  }
+  .submitbox {
+    width: 78%;
     }
-    .div-signup{
-      padding:4%;
-      height: 340px;
-      width: 490px;
+
+}
+@media screen and (max-width: 1441px) {
+  .div-signup {
+    margin-left:32.5%;
+     width: 35%;
+  }
+  #showButtonSignUp1, #showButtonSignUp2{
+
+    margin-top: 6%;
+    margin-right: 17%;
+  }
+  .submitbox {
+    width: 83%;
     }
-    .titleSignUp{
-    padding-top: 8%;  
-    }
-  
-}
-
-@media screen and (max-width: 752px) {
-  .logoSignUpPage{
-    margin-left: 170px; 
-  }
-  .div-signup{
-    padding:4%;
-    height: 380px;
-    width: 490px;
-  }
 
 }
+@media screen and (max-width: 1404px) {
 
-@media screen and (max-width: 659.33px) {
-  .logoSignUpPage{
-    margin-left: 120px; 
-  }
-  .div-signup{
-    padding:4%;
-    height: 370px;
-    width: 480px;
-  }
+  #showButtonSignUp1, #showButtonSignUp2{
 
+    margin-top: 6%;
+    margin-right: 18%;
+  }
 }
 
-@media screen and (max-width: 608px) {
-  .logoSignUpPage{
-    margin-left: 110px; 
+@media screen and (max-width: 1371px) {
+
+  #showButtonSignUp1, #showButtonSignUp2{
+
+    margin-top: 6%;
+    margin-right: 16%;
   }
-  .div-signup{
-    padding:4%;
-    height: 360px;
-    width: 475px;
-  }
-  .eyeIconI{
-    margin-left: -60%;
-   }
-  
 }
 
-@media screen and (max-width: 526px) {
-  .logoSignUpPage{
-    margin-left: 60px; 
-  }
-  .div-signup{
-    padding:4%;
-    height: 360px;
-    width: 475px;
-  }
 
+@media screen and (max-width: 1300px) {
+
+  #showButtonSignUp1, #showButtonSignUp2{
+
+    margin-top: 6%;
+    margin-right: 12%;
+  }
 }
 
+@media screen and (max-width: 1229px) {
+
+  #showButtonSignUp1, #showButtonSignUp2{
+
+    margin-top: 6%;
+    margin-right: 7%;
+  }
+}
+
+@media screen and (max-width: 1138px) {
+  .div-signup {
+      width: 39%;
+      margin-left:30%;
+  }
+  .submitbox {
+    width: 94%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #showButtonSignUp1, #showButtonSignUp2{
+    margin-top: 6%;
+    margin-right: 8%;
+  }
+  .div-signup {
+      width: 42%;
+      margin-left:28%;
+  }
+  .submitbox {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 1005.33px) {
+  #showButtonSignUp1, #showButtonSignUp2{
+    margin-top: 6%;
+    margin-right: 8%;
+  }
+  .div-signup {
+      width: 44%;
+      margin-left:28%;
+  }
+  .submitbox {
+    width: 93%;
+  }
+}
+
+
+@media screen and (max-width: 980px) {
+  #showButtonSignUp1, #showButtonSignUp2{
+    margin-top: 6%;
+    margin-right: 9%;
+  }
+  .div-signup {
+      width: 47%;
+      margin-left:26%;
+  }
+  .submitbox {
+    width: 91%;
+  }
+}
+@media screen and (max-width: 890px) {
+  #showButtonSignUp1, #showButtonSignUp2{
+    margin-top: 6%;
+    margin-right: 11%;
+  }
+  .div-signup {
+      width: 51%;
+      margin-left:24%;
+  }
+  .submitbox {
+    width: 91%;
+  }
+}
+@media screen and (max-width: 880px) {
+  #showButtonSignUp1, #showButtonSignUp2{
+    margin-top: 6%;
+    margin-right: 10%;
+  }
+  .div-signup {
+      width: 51%;
+      margin-left:24%;
+  }
+  .submitbox {
+    width: 92%;
+  }
+}
+@media screen and (max-width: 808px) {
+  #showButtonSignUp1, #showButtonSignUp2{
+    margin-top: 6%;
+    margin-right: 10%;
+  }
+  .div-signup {
+      width: 55%;
+      margin-left:22%;
+  }
+  .submitbox {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .div-signup {
+      width: 58%;
+      margin-left:20%;
+  }
+}
+@media screen and (max-width: 708px) {
+  .div-signup {
+      width: 62%;
+      margin-left:18%;
+  }
+}
+@media screen and (max-width: 681.33px) {
+  .div-signup {
+      width: 65%;
+      margin-left:16%;
+  }
+}
+@media screen and (max-width: 666px) {
+  .div-signup {
+      width: 66%;
+      margin-left:16%;
+  }
+}
+@media screen and (max-width: 657.33px) {
+  .div-signup {
+      width: 67%;
+      margin-left:15%;
+  }
+}
+@media screen and (max-width: 616px) {
+  .div-signup {
+      width: 71%;
+      margin-left:13%;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  .div-signup {
+      width: 76%;
+      margin-left:12%;
+  }
+}
+@media screen and (max-width: 544px) {
+  .div-signup {
+      width: 80%;
+      margin-left:10%;
+  }
+}
 @media screen and (max-width: 500px) {
-  .logoSignUpPage{
-    margin-left: 40px; 
+  .div-signup {
+      width: 87%;
+      margin-left:6%;
   }
-  .div-signup{
-    padding:5%;
-    height: 350px;
-  }
-
 }
+
