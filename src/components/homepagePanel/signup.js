@@ -22,7 +22,7 @@ export default function SignUp() {
     event.preventDefault();
   
     // Sending a sign-up request to the server using axios
-    axios.post('http://localhost:3001/signup', {
+    axios.post('https://back1234.onrender.com/signup', {
       firstName,
       lastName,
       email,

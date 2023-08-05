@@ -233,7 +233,7 @@ export default function Home() {
     const password = document.getElementById("passwordLogin").value;
 
     // Sending a POST request to the server for user authentication
-    fetch("http://localhost:3001/login", {
+    fetch("https://back1234.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
