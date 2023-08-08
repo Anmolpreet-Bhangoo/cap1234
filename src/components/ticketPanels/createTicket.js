@@ -59,7 +59,7 @@ const CreateTicket = () => {
   }
 
   function goToHome(){
-    navigate("/");
+    navigate("/bookTicket");
   }
 
 
