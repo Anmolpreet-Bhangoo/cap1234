@@ -21,14 +21,14 @@
 .div-signup {
   background-color: whitesmoke;
   background-position: center;
-  margin-left:31%;
+  margin-left:33%;
   padding-left: 3%;
   margin-top: -1%;
   padding-top: 1%;
   border-radius: 10px;
   font-family: 'Lato', sans-serif;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  width: 37%;
+  width: 33%;
   height: 70%;
   position: relative;
 }
@@ -68,7 +68,7 @@ font-size: large;
   border: none;
   margin-bottom: 10%;
   border-radius: 6px;
-  width: 90%;
+  width: 86%;
   margin-top: 8%;
   padding: 12px 20px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
@@ -176,37 +176,12 @@ font-size: large;
   cursor: pointer;
   transition: opacity 0.3s;
 }
+#showButtonSignUp1, #showButtonSignUp2{
 
-@media screen and (max-width: 1536px) {
-  .div-signup {
-    margin-left:32.5%;
-     width: 35%;
-  }
-  #showButtonSignUp1, #showButtonSignUp2{
-
-    margin-top: 5%;
-    margin-right: 22%;
-  }
-  .submitbox {
-    width: 78%;
-    }
-
+  margin-top: 6%;
+  margin-right: 14%;
 }
-@media screen and (max-width: 1441px) {
-  .div-signup {
-    margin-left:32.5%;
-     width: 35%;
-  }
-  #showButtonSignUp1, #showButtonSignUp2{
 
-    margin-top: 6%;
-    margin-right: 17%;
-  }
-  .submitbox {
-    width: 83%;
-    }
-
-}
 @media screen and (max-width: 1404px) {
 
   #showButtonSignUp1, #showButtonSignUp2{

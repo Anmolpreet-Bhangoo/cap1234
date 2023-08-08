@@ -4,6 +4,8 @@ import logo from './photo/logo.png';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import Swal from "sweetalert2";
+import TiledeskWidget from './TiledeskWidget'; // Import the TiledeskWidget component
+
 <link 
 href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap" 
 rel="stylesheet">
@@ -353,6 +355,7 @@ export default function Home() {
               <input className='boxesSignUp' type="submit" value="Sign Up" onClick={handleSignup} />
             </div>
           </form>
+          <TiledeskWidget />
         </div>
       </div>
     </div>
