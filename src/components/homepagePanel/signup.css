@@ -1,178 +1,393 @@
-
-.wholeHomePage{
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  color: #333;
-  margin: 0 auto;
+/* Styling for the whole home page */
+.wholeHomePage {
   background-image: linear-gradient(to bottom, rgb(146, 209, 109), rgb(25, 154, 13));
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
+  background-position: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
+/* Styling for the logo and sign-up page section */
+.logoSignUpPage {
+  justify-content: center;
+  display: flex;
+  padding-top: 1%;
+  padding-bottom: 0.5%;
+  
+}
+
+/* Styling for the sign-up container */
 .div-signup {
-  min-width: 300px;
-  height: 80%;
   background-color: whitesmoke;
   background-position: center;
+  margin-left:31%;
+  padding-left: 3%;
+  margin-top: -1%;
+  padding-top: 1%;
   border-radius: 10px;
+  font-family: 'Lato', sans-serif;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 37%;
+  height: 70%;
   position: relative;
 }
 
-.logoSignUpPage {
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-}
-
-.logo-signup{
-  width: 180px;
-} 
-
+/* Styling for the title in the sign-up container */
 .titleSignUp {
-  text-align: left;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
   color: #3DAD58;
-  font-size: 20px;
-  margin: 15px 15px 15px 15px;
+  margin-left: -5%;
+  padding: 1%;
+  font-weight: bold;
+  padding-top: 2%;
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add text shadow */
 }
 
+/* Styling for the inside content of the sign-up container */
 .inside {
+   font-family: 'Lato', sans-serif;
   font-weight: bolder;
   color: #2C3E50;
-  font-size: large;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+font-size: large;
+
+
+
 }
 
-.labelContainer{
-  width: 90%;
-  height: 40px;
-  font-weight: bolder;
-  color: #333;
-  font-size: large;
+/* Styling for the submit button */
+.submitbox {
+  background-color: #3dad58; 
+  color: #fff;
+  cursor: pointer;
   font-size: 18px;
-  margin-bottom: -10px;
+  margin-top: 10px;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 10%;
+  border-radius: 6px;
+  width: 90%;
+  margin-top: 8%;
+  padding: 12px 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.2s;
+}
+.submitbox:hover{
+  background-color: #20c948; /* Change button color on hover */
+  transform: translateY(-2px); /* Add slight upward shift on hover */
 }
 
-.inputSignUpPage{
-    width: 90%;
-    height: 42px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
-    margin-bottom: 15px;
+
+
+/* Styling for centering elements */
+.makeCenter {
+  margin-left: 5%;
 }
 
-.password-signup-container{
-  position: relative;
-  display: flex;
-  justify-content: center;
+/* Styling for the alert message */
+.alertMessage {
+  background-color: #4caf50; /* Green background color */
+  color: white; /* White text color */
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Styling for customizing scrollbar width */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2D8D34;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(77, 154, 73);
+}
+
+/* Styling for hiding a specific button */
+#showButtonSignUp2 {
+  display: none;
+}
+
+/* Styling for input fields (text, email, and password) in the sign-up page */
+.inputSignUpPage[type=text],
+[type=email],
+[type=password] {
+  width: 100%;
+  padding-left: 4%;
+  height: 40px;
+  margin: 3% 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+/* Styling for the password input field in the sign-up page */
+#passwordLoginSignup {
+  width: 100%;
+  padding-left: 4%;
+  height: 40px;
+  margin: 3% 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+/* Styling for the label container */
+.labelContainer {
+  text-align: left;
   width: 100%;
 }
+/* Styles for the eye icon for password visibility */
 
-.password-signup{
-    width: 90%;
-    height: 42px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
-    margin-bottom: 15px;
+.password-field-container {
+  position: relative;
 }
-.eye-show-hide {
-  width: 25px;
+
+.showhide {
   position: absolute;
-  right: 20px;
-  top:38%;
+  right: 10px;
+  top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   transition: opacity 0.3s;
 }
 
-.signup-button-container{
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  margin: 20px auto 0px auto;
-}
-
-.signup-submit-button{
-  background-color: #3dad58;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  padding: 5px 8px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s, transform 0.2s;
-  width: 200px;
-  align-self: center;
-  margin-bottom: 5px;
-}
-
-.signup-submit-button:hover{
-background-color: #20c948; 
-transform: translateY(-2px); 
-}
-
-.cancel-signup-button{
-  background-color: #e74c3c;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  padding: 5px 8px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s, transform 0.2s;
-  width: 200px;
-}
-
-.cancel-signup-button:hover{
-  background-color: #c0392b; 
-  transform: translateY(-2px); 
-}
-
-@media only screen and (min-width: 667px){
-  .titleSignUp {
-    margin: 15px 15px 15px 23px;
-  }
-  
+@media screen and (max-width: 1536px) {
   .div-signup {
-    min-width: 500px;
+    margin-left:32.5%;
+     width: 35%;
   }
+  #showButtonSignUp1, #showButtonSignUp2{
 
-  .eye-show-hide {
-    right: 30px;
+    margin-top: 5%;
+    margin-right: 22%;
+  }
+  .submitbox {
+    width: 78%;
+    }
+
+}
+@media screen and (max-width: 1441px) {
+  .div-signup {
+    margin-left:32.5%;
+     width: 35%;
+  }
+  #showButtonSignUp1, #showButtonSignUp2{
+
+    margin-top: 6%;
+    margin-right: 17%;
+  }
+  .submitbox {
+    width: 83%;
+    }
+
+}
+@media screen and (max-width: 1404px) {
+
+  #showButtonSignUp1, #showButtonSignUp2{
+
+    margin-top: 6%;
+    margin-right: 18%;
   }
 }
 
-@media only screen and (min-width: 844px){
+@media screen and (max-width: 1371px) {
 
-}
+  #showButtonSignUp1, #showButtonSignUp2{
 
-@media only screen and (min-width: 1180px){
-  
-}
-
-@media only screen and (min-width: 1280px){
-  
+    margin-top: 6%;
+    margin-right: 16%;
+  }
 }
 
 
+@media screen and (max-width: 1300px) {
+
+  #showButtonSignUp1, #showButtonSignUp2{
+
+    margin-top: 6%;
+    margin-right: 12%;
+  }
+}
+
+@media screen and (max-width: 1229px) {
+
+  #showButtonSignUp1, #showButtonSignUp2{
+
+    margin-top: 6%;
+    margin-right: 7%;
+  }
+}
+
+@media screen and (max-width: 1138px) {
+  .div-signup {
+      width: 39%;
+      margin-left:30%;
+  }
+  .submitbox {
+    width: 94%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #showButtonSignUp1, #showButtonSignUp2{
+    margin-top: 6%;
+    margin-right: 8%;
+  }
+  .div-signup {
+      width: 42%;
+      margin-left:28%;
+  }
+  .submitbox {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 1005.33px) {
+  #showButtonSignUp1, #showButtonSignUp2{
+    margin-top: 6%;
+    margin-right: 8%;
+  }
+  .div-signup {
+      width: 44%;
+      margin-left:28%;
+  }
+  .submitbox {
+    width: 93%;
+  }
+}
+
+
+@media screen and (max-width: 980px) {
+  #showButtonSignUp1, #showButtonSignUp2{
+    margin-top: 6%;
+    margin-right: 9%;
+  }
+  .div-signup {
+      width: 47%;
+      margin-left:26%;
+  }
+  .submitbox {
+    width: 91%;
+  }
+}
+@media screen and (max-width: 890px) {
+  #showButtonSignUp1, #showButtonSignUp2{
+    margin-top: 6%;
+    margin-right: 11%;
+  }
+  .div-signup {
+      width: 51%;
+      margin-left:24%;
+  }
+  .submitbox {
+    width: 91%;
+  }
+}
+@media screen and (max-width: 880px) {
+  #showButtonSignUp1, #showButtonSignUp2{
+    margin-top: 6%;
+    margin-right: 10%;
+  }
+  .div-signup {
+      width: 51%;
+      margin-left:24%;
+  }
+  .submitbox {
+    width: 92%;
+  }
+}
+@media screen and (max-width: 808px) {
+  #showButtonSignUp1, #showButtonSignUp2{
+    margin-top: 6%;
+    margin-right: 10%;
+  }
+  .div-signup {
+      width: 55%;
+      margin-left:22%;
+  }
+  .submitbox {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .div-signup {
+      width: 58%;
+      margin-left:20%;
+  }
+}
+@media screen and (max-width: 708px) {
+  .div-signup {
+      width: 62%;
+      margin-left:18%;
+  }
+}
+@media screen and (max-width: 681.33px) {
+  .div-signup {
+      width: 65%;
+      margin-left:16%;
+  }
+}
+@media screen and (max-width: 666px) {
+  .div-signup {
+      width: 66%;
+      margin-left:16%;
+  }
+}
+@media screen and (max-width: 657.33px) {
+  .div-signup {
+      width: 67%;
+      margin-left:15%;
+  }
+}
+@media screen and (max-width: 616px) {
+  .div-signup {
+      width: 71%;
+      margin-left:13%;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  .div-signup {
+      width: 76%;
+      margin-left:12%;
+  }
+}
+@media screen and (max-width: 544px) {
+  .div-signup {
+      width: 80%;
+      margin-left:10%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .div-signup {
+      width: 87%;
+      margin-left:6%;
+  }
+}
 
