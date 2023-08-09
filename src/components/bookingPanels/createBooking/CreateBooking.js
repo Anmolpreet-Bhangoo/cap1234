@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Axios from "axios";
 import Swal from "sweetalert2";
+
+// Importing Google Fonts for styling
 <link
   href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap"
   rel="stylesheet"
@@ -13,6 +15,7 @@ export default function CreateBooking() {
   const location = useLocation();
   const { state } = location;
 
+  // State variables to store form inputs
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [roomID, setRoomID] = useState("");
@@ -22,6 +25,7 @@ export default function CreateBooking() {
   const [enquiry, setEnquiry] = useState("");
   const [endTime, setEndTime] = useState("");
 
+  // Populate the form fields if state is provided (for editing an existing booking)
   useEffect(() => {
     if (state) {
       setId(state.id || "");
@@ -35,30 +39,7 @@ export default function CreateBooking() {
     }
   }, [state]);
 
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //     Axios.post("http://localhost:3001/booking", {
-  //       roomID,
-  //       name,
-  //       date,
-  //       time,
-  //       totalHours,
-  //       enquiry,
-  //     })
-  //       .then((res) => {
-  //         console.log(res);
-  //         Swal.fire({
-  //           icon: 'success',
-  //           title: 'Booking Created Successfully'
-  //         })
-  //         navigate("/bookingSubmitted");
-  //       })
-  //       .catch((err) => Swal.fire({
-  //         icon: "error",
-  //         title: "This Room Is Already Booked Between err"
-  //       })
-  //       )
-  // }
+  // Function to handle form submission when booking a room
   function handleSubmit(event) {
   event.preventDefault();
   Axios.post("https://back1234.onrender.com/booking", {
@@ -71,13 +52,16 @@ export default function CreateBooking() {
   })
     .then((res) => {
       console.log(res);
+      // Show a success message using SweetAlert2
       Swal.fire({
         icon: 'success',
         title: 'Booking Created Successfully'
       });
+      // Navigate to the bookingSubmitted page 
       navigate("/bookingSubmitted");
     })
     .catch((err) => {
+      // Handle errors, such as when the room is already booked for the selected time
       if (err.response && err.response.data) {
         const { startTime, endTime } = err.response.data;
         Swal.fire({
@@ -85,6 +69,7 @@ export default function CreateBooking() {
           title: `This Room Is Already Booked Between ${startTime} And ${endTime}. Kindly Book Another Room.`
         });
       } else {
+        // Show a generic error message using SweetAlert2
         Swal.fire({
           icon: "error",
           title: "An error occurred while processing your request."
@@ -92,16 +77,18 @@ export default function CreateBooking() {
       }
     });
 }
-
   
-
+  // Function to handle cancel button click, navigating to the viewBookings page
   function handleCancel() {
     navigate("/viewBookings");
   }
+
+  // Function to handle cancel button click when creating a new booking, navigating to the bookTicket page
   function handleCancelToBookTicket(){
     navigate("/bookTicket");
   }
 
+  // Function to handle updating an existing booking
   const update = (event) => {
     event.preventDefault();
     Axios.put("https://back1234.onrender.com/update", {
@@ -115,15 +102,18 @@ export default function CreateBooking() {
       endTime: endTime,
     })
       .then(() => {
+        // Show a success message using SweetAlert2
         Swal.fire({
           title: "<strong>Update completed.</strong>",
           html: `<i> Booking request made by ${name} was included in successfully</i>`,
           icon: "success",
         }).then(() => {
+          // Navigate to the viewBookings page after successful update
           navigate('/viewBookings');
         });
-      })
+      })  
       .catch(function (error) {
+        // Handle errors during update
         Swal.fire({
           icon: "error",
           title: "Oops...",
@@ -137,6 +127,7 @@ export default function CreateBooking() {
 
   return (
     <>
+      {/* Rendering the form for creating or updating a booking */}
      <div className="createBookingBackground">
 
       <div className="main-ct">
@@ -147,6 +138,8 @@ export default function CreateBooking() {
         <div className="form-ct">
           <div className="insideForm-ct">
             <form onSubmit={handleSubmit}>
+
+              {/* Form fields for name, room number, date, start time, total hours, and enquiry */}
                 <label className="label-ct">Name</label>
                 <input
                   type="text"
@@ -163,6 +156,7 @@ export default function CreateBooking() {
                   value={roomID}
                   required
                 >
+                  {/* Options for different room numbers */}
                   <option value="">Choose a Room Number</option>
                   <option value="Resource Centre">Resource Centre - Max Capacity (15 Person)</option>
                   <option value="Business Centre 1">Business Centre 1 - Max Capacity (14 Person)</option>
@@ -219,6 +213,7 @@ export default function CreateBooking() {
                 ></textarea>
            
                 {state ? (
+                  // If state is available (editing an existing booking), render update and cancel buttons
                   <>
                     <button className="update-ct" onClick={update}>
                       Update
@@ -228,6 +223,7 @@ export default function CreateBooking() {
                     </button>
                   </>
                 ) : (
+                  // If state is not available (creating a new booking), render submit and cancel buttons
                   <>
                   <input className="submit-ct" type="submit" value="Book Room!" />
                   <button className="cancelToBookTicket-ct" type="button" onClick={handleCancelToBookTicket}> Cancel </button>
