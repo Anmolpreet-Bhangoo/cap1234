@@ -62,7 +62,7 @@ export default function CreateBooking() {
     })
     .catch((err) => {
       // Handle errors, such as when the room is already booked for the selected time
-      if (err.response && err.response.data) {
+      if (err.response) {
         const { startTime, endTime } = err.response.data;
         Swal.fire({
           icon: "error",
