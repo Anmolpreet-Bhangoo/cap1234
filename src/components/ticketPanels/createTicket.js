@@ -86,7 +86,7 @@ const CreateTicket = () => {
             onChange={(e) => setCategory(e.target.value)}
           >
             <option value="Technical">Technical</option>
-            <option value="Water Issues">Water Issue</option>
+            <option value="Leakage">Leakage</option>
             <option value="Furniture">Furniture</option>
             <option value="Electrical">Electrical</option>
             <option value="Bathroom">Bathroom</option>
