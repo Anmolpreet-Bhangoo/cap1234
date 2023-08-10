@@ -62,7 +62,7 @@ export default function CreateBooking() {
     })
     .catch((err) => {
       // Handle errors, such as when the room is already booked for the selected time
-      if (err.response) {
+      if (err.response && err.response.data) {
         Swal.fire({
           icon: "error",
           title: `This Room Is Already Booked. Kindly Book Another Room.`
@@ -71,7 +71,7 @@ export default function CreateBooking() {
         // Show a generic error message using SweetAlert2
         Swal.fire({
           icon: "error",
-          title: "Apologies, but there was an issue processing your request, or the room is already booked."
+          title: "An error occurred while processing your request."
         });
       }
     });
