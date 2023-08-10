@@ -71,7 +71,7 @@ export default function CreateBooking() {
         // Show a generic error message using SweetAlert2
         Swal.fire({
           icon: "error",
-          title: "An error occurred while processing your request."
+          title: "Apologies, but there was an issue processing your request, or the room is already booked."
         });
       }
     });
