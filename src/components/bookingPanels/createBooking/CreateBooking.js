@@ -63,10 +63,9 @@ export default function CreateBooking() {
     .catch((err) => {
       // Handle errors, such as when the room is already booked for the selected time
       if (err.response) {
-        const { startTime, endTime } = err.response.data;
         Swal.fire({
           icon: "error",
-          title: `This Room Is Already Booked Between ${startTime} And ${endTime}. Kindly Book Another Room.`
+          title: `This Room Is Already Booked. Kindly Book Another Room.`
         });
       } else {
         // Show a generic error message using SweetAlert2

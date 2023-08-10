@@ -19,7 +19,7 @@ const TicketSubmitted = () => {
       <br/>
       <h1 id="ticketSubmittedText">Your Ticket Has Been Submitted!</h1>
       <br/><br/>
-      <h2 id="textEmail">A confromation Email has been Sent</h2> 
+      <h2 id="textEmail">A conformation Email has been Sent</h2> 
       <br/><br/>
       <button id="ticketSubmittedAnother" className="ticketSubmittedclass" onClick={issueTicket}>Issue Another Ticket</button>
       <br></br>

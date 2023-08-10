@@ -20,7 +20,7 @@ const BookingSubmitted = () => {
       <br/>
       <h1 id="bookingSubmittedText">Thank You For Booking a Room With Us!</h1>
       <br/><br/>
-      <h2 id="bookingTextEmail">A confromation Email has been Sent</h2> 
+      <h2 id="bookingTextEmail">A conformation Email has been Sent</h2> 
       <br/><br/>
       <button id="bookingSubmittedAnother" className="bookingSubmittedclass" onClick={issueAnotherBooking}>Issue Another Booking</button>
       <br></br>
