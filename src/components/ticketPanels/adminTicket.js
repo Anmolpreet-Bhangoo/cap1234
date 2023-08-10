@@ -171,7 +171,6 @@ const AdminTicket = () => {
                 <th className="table-header-at hide-at-column-1">
                   Issued Date
                 </th>
-                <th className="table-header-at hide-at-column-2">Email</th>
                 <th className="table-header-at hide-at-column-3">Category</th>
                 <th className="table-header-at hide-at-column-4">Subject</th>
                 <th className="table-header-at hide-at-column-5">
@@ -193,9 +192,6 @@ const AdminTicket = () => {
                 <tr className="row-container-at" key={i}>
                   <td className="table-data-at hide-at-column-1">
                     {new Date(data.TICKET_DATE).toLocaleDateString("en-GB")}
-                  </td>
-                  <td className="table-data-at hide-at-column-2">
-                    {data.USER_EMAIL}
                   </td>
                   <td className="table-data-at hide-at-column-3">
                     {data.TICKET_CATEGORY}{" "}
