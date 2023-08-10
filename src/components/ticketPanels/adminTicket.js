@@ -191,7 +191,7 @@ const AdminTicket = () => {
               {filteredData.map((data, i) => (
                 <tr className="row-container-at" key={i}>
                   <td className="table-data-at hide-at-column-1">
-                    {new Date(data.TICKET_DATE).toLocaleDateString("en-GB")}
+                    {(data.TICKET_DATE).substring(0, 10)}
                   </td>
                   <td className="table-data-at hide-at-column-3">
                     {data.TICKET_CATEGORY}{" "}
