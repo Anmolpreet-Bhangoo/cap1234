@@ -1,5 +1,7 @@
+
+// Importing required components and modules
 import React from "react";
-import "./TableAdmin.css";
+import "./TableAdmin.css"; // Importing TableAdmin styles.
 
 function Table({ id, roomID, name, bookingDate, startTime, endTime, totalHours, enquiry, isChecked, onSelect, handleEdit, toDelete }) {
   
@@ -11,7 +13,6 @@ function Table({ id, roomID, name, bookingDate, startTime, endTime, totalHours, 
       <td className="table-data-ab hide-column-1">{id}</td>
       <td className="table-data-ab hide-column-2">{roomID}</td>
       <td className="table-data-ab hide-column-3">{name}</td>
-      {/* <td className="table-data-ab hide-column">{noOfGuest}</td> */}
       <td className="table-data-ab hide-column-4">{bookingDate}</td>
       <td className="table-data-ab hide-column-5">{startTime}</td>
       <td className="table-data-ab hide-column-6">{endTime}</td>
@@ -29,7 +30,6 @@ function Table({ id, roomID, name, bookingDate, startTime, endTime, totalHours, 
                     id,
                     roomID,
                     name,
-                    // noOfGuest,
                     bookingDate,
                     startTime,
                     totalHours,
@@ -58,4 +58,5 @@ function Table({ id, roomID, name, bookingDate, startTime, endTime, totalHours, 
   );
 }
 
-export { Table };
+export { Table }; // Exporting Table component
+

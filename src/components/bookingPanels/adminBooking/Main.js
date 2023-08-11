@@ -1,7 +1,8 @@
+
+// Importing required components and modules
 import React, { useState } from "react";
 import { Table } from "./Table";
 import "./Main.css";
-// import { FaHome } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 
@@ -20,12 +21,12 @@ function Main({
   setCurrentPage,
   itemsPerPage,
 }) {
+
+  // State to keep track of selected rows
   const [selectedRows, setSelectedRows] = useState([]);
   const navigate = useNavigate();
-  const navigateAdminPanel = () => {
-    navigate("/adminPanel");
-  };
 
+  // Function to handle row selection
   const handleRowSelection = (index) => {
     if (selectedRows.includes(index)) {
       setSelectedRows(selectedRows.filter((rowIndex) => rowIndex !== index));
@@ -34,12 +35,19 @@ function Main({
     }
   };
 
+  // Function to navigate to the admin panel when the button is clicked
+  const navigateAdminPanel = () => {
+    navigate("/adminPanel");
+  };
+
+  // Filtering and sorting requests based on search and orderBy
   const filteredAndSortedRequests = requests
     .filter((request) => {
+
+      // Filtering based on searchValue
       const valueToLower = searchValue.toLowerCase();
       const roomIDLower = request.roomID.toString().toLowerCase();
       const nameToLower = request.name.toLowerCase();
-      // const noOfGuestLower = request.noOfGuest.toString().toLowerCase();
       const bookingDateLower = request.bookingDate.toLowerCase();
       const startTimeLower = request.startTime.toLowerCase();
       const totalHoursLower = request.totalHours.toString().toLowerCase();
@@ -49,7 +57,6 @@ function Main({
       return (
         roomIDLower.includes(valueToLower) ||
         nameToLower.includes(valueToLower) ||
-        // noOfGuestLower.includes(valueToLower) ||
         bookingDateLower.includes(valueToLower) ||
         startTimeLower.includes(valueToLower) ||
         totalHoursLower.includes(valueToLower) ||
@@ -57,6 +64,8 @@ function Main({
         endTimeLower.includes(valueToLower)
       );
     })
+
+    // Sorting based on orderBy option
     .sort((a, b) => {
       if (orderBy === "bookingDate") {
         return a.bookingDate.localeCompare(b.bookingDate);
@@ -72,11 +81,11 @@ function Main({
     });
 
   const handleNextPage = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
+    setCurrentPage((prevPage) => prevPage + 1); // Incrementing the current Page
   };
 
   const handlePrevPage = () => {
-    setCurrentPage((prevPage) => prevPage - 1);
+    setCurrentPage((prevPage) => prevPage - 1); // Decrementing the current Page
   };
 
   return (
@@ -85,7 +94,6 @@ function Main({
           <div className="header-ab">
             <div className="header-ab-items">
               <img id="logo-ab" src={logo} alt="Prospect company logo" />
-              {/* <FaHome className="header-icon-ab" /> */}
               <h1 className="title-ab">Bookings</h1>
             </div>
 
@@ -99,7 +107,7 @@ function Main({
                 }}
               >
                 <option value="">Sort by...</option>
-                <option value="BookingDate">Booking Date</option>
+                <option value="bookingDate">Booking Date</option>
                 <option value="id">Order Number</option>
                 <option value="name">Name</option>
                 <option value="roomID">Room Number</option>
@@ -144,7 +152,6 @@ function Main({
                   <th className="table-header-ab hide-column-1">Order #</th>
                   <th className="table-header-ab hide-column-2">Room ID</th>
                   <th className="table-header-ab hide-colum3">Name</th>
-                  {/* <th className="table-header-ab hide-column-4">Guests Number</th> */}
                   <th className="table-header-ab hide-column-4">
                     Date of Booking
                   </th>
@@ -194,7 +201,7 @@ function Main({
               </button>
               <span className="page-indicator">Page {currentPage}</span>
               <button
-                className="button-footer-ab" /*btn btn-secondary*/
+                className="button-footer-ab" 
                 onClick={handleNextPage}
                 disabled={requests.length < itemsPerPage}
               >
